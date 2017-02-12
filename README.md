@@ -10,14 +10,14 @@ Repository: https://github.com/andywu9/StudyBuddy
 
 Setup
 
-Visit our Github wiki for instructions on setup and getting started.
+Visit our Github Wiki for instructions on environemnt setup and getting started.
 
 
 Contributing
 
 Issues and contributions to Study Buddy are encouraged! Please feel free to fork the repository, make a pull request, comment on an issue , or create an issue. If a pull request is made please make sure it is staging branch. Please provide meaningful comments. Any changes to improve the site would be great!
 
-Licensning
+Licensing
 
 MIT License
 Copyright (c) 2017 Andy Wu
