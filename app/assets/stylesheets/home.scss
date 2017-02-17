@@ -1,5 +1,61 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+	color: white;
+	text-align: center;
+	font-family: "Verdana", sans-serif;
+	padding: 10px;
+}
 
-@import "home.css"
+h2 {
+	color:white;
+	text-align: center;
+	font-family: "Verdana", sans-serif;
+	padding: 10px;
+
+}
+
+h3 {
+	color: white;
+    font-size: 18px;
+	
+
+}
+
+body {
+    padding-top: 20px;
+    background-image : url(asset-path('home.jpg'));
+    background-size: cover;
+}
+
+.field{
+	text-align: center;
+	color: black;
+	font-size: 18px;
+	margin-top: 5px;
+
+}
+
+.actions{
+	
+	font-size: 18px;
+	postion: fixed;
+	margin-top: 10px;
+    text-align: center;
+
+	
+}
+
+p {
+    position: fixed;
+    bottom: 0;
+    color: black;
+}
+
+
+
+.link{
+    text-align: center;
+	color: blue;
+	font-size: 18px;
+}
+
+
