@@ -7,5 +7,3 @@
 
 <%# and this would load the controller specific file %>
 <%= stylesheet_link_tag params[:controller] %>
-
-

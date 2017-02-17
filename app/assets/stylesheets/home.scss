@@ -1,12 +1,12 @@
 h1 {
-	color: black;
+	color: white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	padding: 10px;
 }
 
 h2 {
-	color: black;
+	color:white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	padding: 10px;
@@ -14,7 +14,7 @@ h2 {
 }
 
 h3 {
-	color: black;
+	color: white;
     font-size: 18px;
 	
 
@@ -22,7 +22,8 @@ h3 {
 
 body {
     padding-top: 20px;
-    background-color: crimson;
+    background-image : url(asset-path('home.jpg'));
+    background-size: cover;
 }
 
 .field{
