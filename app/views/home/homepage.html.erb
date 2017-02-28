@@ -1,2 +1,12 @@
+<% usr_email =
+   User.select(:email).where(User.arel_table[:email].eq('adamsm6@rpi.edu')) %>
+<% curr_time = Time.now.strftime("%I:%M %p")
+curr_date = Time.now.strftime("%A %B %d %Y") %>
+
 <h1>Home#homepage</h1>
+<% if user_signed_in? %>
+  <div>Hello <%= current_user.email %></div>
+<% end %>
+
+<%="Today is #{curr_date} and the time is currently #{curr_time}."%>
 <p>Find me in app/views/home/homepage.html.erb</p>
