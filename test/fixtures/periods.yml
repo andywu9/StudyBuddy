@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  department_code: MyString
+  course_number: 
+  day: MyString
+  start: MyString
+  end: MyString
+  type: 
+
+two:
+  department_code: MyString
+  course_number: 
+  day: MyString
+  start: MyString
+  end: MyString
+  type: 
