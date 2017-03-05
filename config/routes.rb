@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'class_options/new'
+
   get 'home/homepage'
 
   devise_for :users
