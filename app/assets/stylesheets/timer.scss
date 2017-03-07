@@ -1,0 +1,82 @@
+// Place all the styles related to the Timer controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body {
+	font-family: 'Exo', sans-serif;
+}
+
+#menuBar {
+	display:table;
+	width:100%;
+	background-color:blue;
+	border-bottom:3px solid black;
+	position:relative;
+	z-index:1;
+}
+
+#homeTitle {
+	padding-left: 1%;
+}
+
+#mainPageContainer {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	height: 90%;
+	position:absolute;
+	z-index:0;
+}
+
+#leftCol {
+	background-color: #99baff;
+	display: table-cell;
+	width: 15%;
+	height: 100%;
+	padding-right: 0.5%;
+	padding-left: 0.5%;
+	color: #FFFFFF;
+ 	box-shadow:10px 0px 20px black;
+ 	position:relative;
+}
+
+#rightCol {
+	display: table-cell;
+	width: 70%;
+	padding-left: 2%;
+}
+
+#timerButtons {
+	padding-top:20%;
+	padding-left:35%;
+}
+
+.timerButton {
+	height:50px;
+	width:150px;
+}
+
+#timer {
+	height:50px;
+	width:150px;
+}
+
+#finBut {
+	position:absolute;
+	bottom: 0;
+	padding-bottom: 5%;
+	right: 0;
+	padding-right:26%;
+}
+
+#finishButton {
+	height:40px;
+	width:150px;
+}
+
+#finalTime {
+	position:absolute;
+	bottom: 0;
+	padding-bottom: 20%;
+}
+
