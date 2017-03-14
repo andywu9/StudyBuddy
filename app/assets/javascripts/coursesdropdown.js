@@ -1,44 +1,5 @@
-
-
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file. JavaScript code in this file should be added after the last require_* statement.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-
-
-
-
-
-//= require react
-//= require react_ujs
-//= require components
-//= require moment 
-//= require fullcalendar
-$(document).ready(function() {
-
-    // page is now ready, initialize the calendar...
-
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
-
-});
-
-
 var stateObject = {
-    "ARTS": {
+    "Arts": {
         "Monterey": ["Salinas", "Gonzales"],
         "Alameda": ["Berkeley"]
     },
@@ -90,30 +51,7 @@ var stateObject = {
         "Douglas": ["Roseburg", "Winston"],
     },
     "PSYC": {
-        "General Psychology": ["01", "02"],
-        "Critical Thinking": ["01"],
-        "Introduction to Cognitive Science": ["01"],
-        "Human Factors in Design": ["01", "02"],
-        "Social Psychology": ["01"],
-        "Positive Psychology": ["01"],
-        "Motivation and Performance": ["01"],
-        "Professional Development II: Leadership Theories": ["01", "02"],
-        "Industrial and Organizational Psychology": ["01"],
-        "Research Methods and Statistics II": ["01"],
-        "Behavorial Neuroscience": ["01"],
-        "Introduction to Cognitive Neuroscience": ["01"],
-        "Cognitive Psychology": ["01"],
-        "Personality": ["01"],
-        "Learning": ["01"],
-        "Drugs, Society, and Behavior": ["01"],
-        "Cognitive Modeling": ["01"],
-        "Stress and the Brain": ["01"],
-        "Abnormal Psychology": ["01"],
-        "Forensic Psychology": ["01"],
-        "Sports Psychology Seminar": ["01"],
-        "Readings in Psychology": ["00"],
-        "The Psych Of Reward": ["01"],
-        "Undergraduate Thesis": ["03", "17"]
+        "Douglas": ["Roseburg", "Winston"],
     },
     "ITWS": {
         "Douglas": ["Roseburg", "Winston"],
@@ -131,11 +69,7 @@ var stateObject = {
         "Douglas": ["Roseburg", "Winston"],
     },
     "WRIT": {
-        "Writing for Classroom and Career": ["01"],
-        "Creative Writing: Short Story": ["01"],
-        "Creative Non-Fiction": ["01"],
-        "Creative Writing: The Short Story": ["01"],
-        "Speech Communication": ["01", "02"]
+        "Douglas": ["Roseburg", "Winston"],
     },
     "PHYS": {
         "Douglas": ["Roseburg", "Winston"],
@@ -227,10 +161,10 @@ window.onload = function () {
     countySel.onchange = function () {
         citySel.length = 1; // remove all options bar first
         if (this.selectedIndex < 1) {
-          citySel.options[0].text = "Please select course first"
+          citySel.options[0].text = "Please select county first"
           return; // done   
         }  
-        citySel.options[0].text = "Please select Section"
+        citySel.options[0].text = "Please select city"
         
         var cities = stateObject[stateSel.value][this.value];
         for (var i = 0; i < cities.length; i++) {

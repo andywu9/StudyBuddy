@@ -1,36 +1,51 @@
 h1 {
+	padding-bottom: 40px;
 	color: white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
-	padding: 10px;
-}
-
-h2 {
-	color:white;
-	text-align: center;
-	font-family: "Verdana", sans-serif;
-	padding: 10px;
 
 }
-
-h3 {
+hello {
+	padding-top: 10px;
 	color: white;
     font-size: 18px;
 	
+}
+
+.list-group { 
+ background:none;
+    margin: 50px; 
+    min-width: 400px;
+    text-allign: center;
+    width: 40%;
+
+ }
+ h4 {
+
+
+ 	color: white;
+ }
+
+
+info {
+	padding-top: 5px;
+    text-align: right;
+	color:  white;
+    font-size: 18px;
 
 }
 
 body {
-    padding-top: 20px;
+    
     background-size: 100% ;
-    background-image : url(asset-path('home.jpg'));
+    background-image : url("emac.jpg");
 
     
 }
 
 .field{
 	text-align: center;
-	color: black;
+	color: white;
 	font-size: 18px;
 	margin-top: 5px;
 
@@ -49,7 +64,7 @@ body {
 p {
     position: fixed;
     bottom: 0;
-    color: black;
+    color: white;
 }
 
 
