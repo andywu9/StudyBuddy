@@ -3,6 +3,7 @@ class CreatePeriods < ActiveRecord::Migration[5.0]
     create_table :periods do |t|
       t.string :department_code
       t.string :section_name
+      t.string :course_name
       t.string :course_number
       t.string :day
       t.string :start_time

@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170305204720) do
   create_table "periods", force: :cascade do |t|
     t.string   "department_code"
     t.string   "section_name"
+    t.string   "course_name"
     t.string   "course_number"
     t.string   "day"
     t.string   "start_time"

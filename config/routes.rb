@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'add_class/add'
+
+  get 'calendar/myCalendar'
+
   get 'class_options/new'
 
   get 'home/homepage'

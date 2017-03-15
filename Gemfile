@@ -14,9 +14,12 @@ gem  'autoprefixer-rails'
 gem 'rails', '~> 5.0.1'
 
 gem 'yajl-ruby'
+gem 'gon'
 
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+gem 'react-rails', '~> 1.7', '>= 1.7.1'
 
 
 gem 'devise', '~> 4.2'
