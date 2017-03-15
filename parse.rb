@@ -41,7 +41,7 @@ json['courses'].each do |course|
 			startTime = myPeriod["start"]
 			type = myPeriod["type"]
 
-			p = Period.create :department_code => department_code,  :course_number=> number,
+p = Period.create :department_code => department_code, :course_name=> course_name, :course_number=> number,
    			:section_name=> section_name, :day=> day , :start_time=>startTime , :end_time=>endTime , :course_type=>type 
 
 		end
