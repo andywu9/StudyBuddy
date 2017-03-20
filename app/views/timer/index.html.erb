@@ -19,6 +19,19 @@
 			<h1>
 				Timer
 			</h1>
+			<form name="studytimef">
+			I want to study for 
+			<input type="text" name=t>
+			<select name="units">
+				<option value = "minutes">minutes</option>
+				<option value="hours">hours</option>
+			</select>
+			and take 
+			<input type="text" name="numbreaks"> breaks
+			that are
+			<input type="text" name="lenbreaks"> minutes long. 
+			<input type="submit" value="Start Studying!">
+			</form>
 			<div id="timer">
 				<div id="clock">
 					<font size ="7"><label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label></font><font size="5"><label id="millis">000</label></font>
