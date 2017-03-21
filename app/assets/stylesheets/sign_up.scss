@@ -1,59 +1,55 @@
 h1 {
-	color: blue;
+	color: white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	padding: 10px;
+	font-weight: bold;
+	font-size: 50px;
 }
 
 h2 {
-	color: black;
+	color: white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	padding: 10px;
-
+	font-weight: 600;
 }
 
 h3 {
-	color: black;
+	color: white;
     font-size: 18px;
-	
-
 }
 
 body {
     padding-top: 20px;
-    background-color: crimson;
+    background-size: 100% ;
+    background-image : url("empacnight.jpg");
 }
 
 .field{
 	text-align: center;
-	color: black;
+	color: white;
 	font-size: 18px;
 	margin-top: 5px;
-
 }
 
-.actions{
-	
+.actions{	
 	font-size: 18px;
 	postion: fixed;
 	margin-top: 10px;
     text-align: center;
-
-	
 }
 
 p {
     position: fixed;
     bottom: 0;
-    color: black;
+    color: white;
 }
-
 
 
 .link{
     text-align: center;
-	color: blue;
+	color: white;
 	font-size: 18px;
 }
 
