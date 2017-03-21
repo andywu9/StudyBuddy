@@ -28,7 +28,7 @@ body {
 
 .field{
 	text-align: center;
-	color: black;
+	color: white;
 	font-size: 18px;
 	margin-top: 5px;
 }
@@ -40,7 +40,12 @@ body {
     text-align: center;
 }
 
-p {
+input {
+	color: black;
+}
+
+
+p{
     position: fixed;
     bottom: 0;
     color: white;
