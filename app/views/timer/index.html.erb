@@ -5,13 +5,23 @@
 <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
 
 <body>
-
-	<div id="menuBar">
-		<div id="homeTitle">
-			<font size="5"><label> Study Buddy </label></font>
+	<div class="menuBar">
+		<a href="#home">Study Buddy</a>
+		<a href="#calender">Calender</a>
+		<a href="#stats">Statistics</a>
+		<div class="dropdown">
+			<button id="dropbtn" class="dropbtn">Dropdown</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="#about">About</a>
+				<a href="#base">Base</a>
+				<a href="#blog">Blog</a>
+				<a href="#contact">Contact</a>
+				<a href="#custom">Custom</a>
+				<a href="#support">Support</a>
+				<a href="#tools">Tools</a>
+			</div>
 		</div>
 	</div>
-
 
 
 	<div id="mainPageContainer">
@@ -19,9 +29,24 @@
 			<h1>
 				Timer
 			</h1>
+
+			<form name="studytimef">
+			I want to study for 
+				<input type="text" name=t>
+				<select name="units">
+					<option value = "minutes">minutes</option>
+					<option value="hours">hours</option>
+				</select>
+			and take 
+				<input type="text" name="numbreaks"> breaks
+			that are
+				<input type="text" name="lenbreaks"> minutes long. 
+				<input type="submit" value="Start Studying!">
+			</form>
+
 			<div id="timer">
-				<div id="clock">
-					<font size ="7"><label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label></font><font size="5"><label id="millis">000</label></font>
+				<div class="timeDigits" id="clock">
+					<label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label><label class="milli" id="millis">000</label>
 				</div>
 
 				<div id="timerButtons">
@@ -32,121 +57,28 @@
 			</div>
 
 			<div id="finalTime">
-				<font size="6"><label id="finalStudy">Last Study Session:<br /></label></font>
-				<font size="7"><label id="hoursFin">00</label>:<label id="minutesFin">00</label>:<label id="secondsFin">00</label></font><font size="5"><label id="millisFin">000</label>
+				<label id="finalStudy">Last Study Session:<br /></label>
+				<div id="bottomTimer">
+					<label id="hoursFin">00</label>:<label id="minutesFin">00</label>:<label id="secondsFin">00</label><label class="milli" id="millisFin">000</label>
+				</div>
 			</div>
 
 			<div id="finBut">
-				<button id="finishButton">Finish Studying</button>
+				<button class="timerButton" id="finishButton">Finish Studying</button>
 			</div>
-
-			<!-- TODO: include this as an external file instead of embedded in html -->
-			<script type="text/javascript">
-				var hoursLabel = document.getElementById("hours");
-				var minutesLabel = document.getElementById("minutes");
-				var secondsLabel = document.getElementById("seconds");
-				var millisLabel = document.getElementById("millis");
-				var totalMilSecondsStart = 0;
-				var totalMilSeconds = 0;
-				var startPauseButton = document.getElementById("startPauseButton");
-				var restartButton = document.getElementById("restartButton");
-				var interval;
-				var stopTime = 0;
-
-				startPauseButton.onclick = startOrPause;
-
-				document.body.onkeyup = function(e) {
-					if(e.keyCode == 32) 
-						startOrPause();
-				}
-
-
-				function startOrPause() {
-					if (interval == null) {
-						totalMilSecondsStart = Date.now()-stopTime;
-						stopTime = 0;
-						interval = setInterval(setTime,10);
-					}
-					else {
-						clearInterval(interval);
-						interval = null;
-				    	stopTime = totalMilSeconds
-					}
-				}
-
-				restartButton.onclick = function() {
-					stopTime = 0;
-				    totalMilSecondsStart = Date.now();
-				    totalMilSeconds = 0;
-				    millisLabel.innerHTML = pad(0) + "0";
-				    secondsLabel.innerHTML = pad(0);
-				    minutesLabel.innerHTML = pad(0);
-				    hoursLabel.innerHTML = pad(0);
-				}
-
-				function setTime()
-				{
-				    totalMilSeconds = Date.now()-totalMilSecondsStart;
-				    var milSeconds = totalMilSeconds;
-
-				    hoursLabel.innerHTML = pad(parseInt(milSeconds/3600000));
-				    milSeconds = milSeconds%3600000;
-				    minutesLabel.innerHTML = pad(parseInt(milSeconds/60000));
-				    milSeconds = milSeconds%60000;
-				    secondsLabel.innerHTML = pad(parseInt(milSeconds/1000));
-				    millisLabel.innerHTML = pad(milSeconds%1000)
-				}
-
-				function pad(val)
-				{
-				    var valString = val + "";
-				    if(valString.length < 2)
-				    {
-				        return "0" + valString;
-				    }
-				    else
-				    {
-				        return valString;
-				    }
-				}
-
-				function padMil(val)
-				{
-				    var valString = val + "";
-
-				    if(valString.length < 3)
-				        return "00" + valString;
-				    else if (valString.length < 2)
-				        return "0" + valString;
-				    else 
-				    	return valString;
-				}
-
-				var finishMillisLabel = document.getElementById("millisFin")
-				var finishSecondsLabel = document.getElementById("secondsFin");
-				var finishMinutesLabel = document.getElementById("minutesFin");
-				var finishHoursLabel = document.getElementById("hoursFin");
-				var finishButton = document.getElementById("finishButton");
-
-				finishButton.onclick = function() {
-					clearInterval(interval);
-					interval = null;
-			    	stopTime = totalMilSeconds
-				    var milSeconds = totalMilSeconds;
-
-				    finishHoursLabel.innerHTML = pad(parseInt(milSeconds/3600000));
-				    milSeconds = milSeconds%3600000;
-				    finishMinutesLabel.innerHTML = pad(parseInt(milSeconds/60000));
-				    milSeconds = milSeconds%60000;
-				    finishSecondsLabel.innerHTML = pad(parseInt(milSeconds/1000));
-				    finishMillisLabel.innerHTML = padMil(milSeconds%1000);
-				}
-
-			</script>
 		</div>
 		<div id="rightCol">
+			<div id="graphContainer">
+
+
+			</div>
 			<p>
-				Add functionality for study schedule similar to workout schedule. <br /> <br />
+				Pick a study plan: <br /><br />
+
+				1. balhgla <br />
+				2. jkldjad <br />
+				3. asjlkj <br /> <br />
+
 
 				Add alarms for break and study times. <br /> <br />
 
