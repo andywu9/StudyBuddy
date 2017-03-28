@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<style src="../assests/stylesheets/timer.scss"></style>
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+
+<body>
+	<div class="menuBar">
+		<a href="#home">Study Buddy</a>
+		<a href="#calendar">Calendar</a>
+		<a href="#stats">Statistics</a>
+		<div class="dropdown">
+			<button id="dropbtn" class="dropbtn">Dropdown</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a href="#about">About</a>
+				<a href="#base">Base</a>
+				<a href="#blog">Blog</a>
+				<a href="#contact">Contact</a>
+				<a href="#custom">Custom</a>
+				<a href="#support">Support</a>
+				<a href="#tools">Tools</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="mainPageContainer">
+		<div id="timerSideBar">
+			<h1>
+				Pick a Study Plan! 
+			</h1>
+			
+			<form name="studytimef">
+				<select class="planSelect" id="planSelect" name="PlandropDown">
+					<option value="firstPlan" data-dur="3" data-type="hours" data-breaks="0" data-breakDur="0">Cram</option>
+					<option value="secondPlan">Lots of Breaks</option>
+					<option value="thirdPlan">Few But Long Breaks</option>
+					<option value="tmpPlan">Temporary Plan</option>
+				</select>
+				<br />
+				<a href="#profile">Create New Plan</a>
+
+				<br />
+				<br />
+				<div id="firstPlan">
+				</div>
+				<div id="secondPlan">
+				</div>
+				<div id="thirdPlan">
+				</div>
+				<div id="tmpPlan" class="hidden">
+					Create a temporary plan <br />
+					I want to study for <input type="text" name="duration">
+					<select name="units">
+						<option value = "minutes">minutes</option>
+						<option value="hours">hours</option>
+					</select>
+					and take 
+					<input type="text" name="numbreaks"> breaks
+					that are
+					<input type="text" name="lenbreaks"> minutes long. 
+				</div>
+				<!-- <input class="timerButton" id="planSubmitBtn" type="submit" value="Start Studying!"> -->
+			</form>
+
+			<div id="timer">
+				<div class="timeDigits" id="clock">
+					<label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label><label class="milli" id="millis">000</label>
+				</div>
+
+				<div class="centeredButtons" id="timerButtons">
+						<button class="timerButton" id="startPauseButton">Start/Pause</button>
+						<p></p>
+						<button class="timerButton" id="restartButton">Restart</button>
+				</div>
+			</div>
+
+			<div id="finalTime">
+				<label id="finalStudy">Last Study Session:<br /></label>
+				<div id="bottomTimer">
+					<label id="hoursFin">00</label>:<label id="minutesFin">00</label>:<label id="secondsFin">00</label><label class="milli" id="millisFin">000</label>
+				</div>
+			</div>
+
+			<div id="finBut">
+				<button class="timerButton" id="finishButton">Finish Studying</button>
+			</div>
+		</div>
+		<div id="rightCol">
+			<div id="graphContainer">
+
+
+			</div>
+			<p>
+				Pick a study plan: <br /><br />
+
+				1. balhgla <br />
+				2. jkldjad <br />
+				3. asjlkj <br /> <br />
+
+
+				Add alarms for break and study times. <br /> <br />
+
+				Also tips and other useful information for studying. <br /> <br />
+
+				Thinking about adding something that randomly generates a study tip every so many seconds: <br /> <br /> <br />
+
+				"Did you know that taking short breaks in the middle of long study sessions actually aids in learning and helps retain knowledge?"
+			</p>
+		</div>
+	</div>
+</body>
+</html>
