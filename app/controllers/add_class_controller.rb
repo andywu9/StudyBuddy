@@ -1,4 +1,6 @@
 class AddClassController < ApplicationController
+
+
   def add
   	
  
@@ -17,4 +19,13 @@ class AddClassController < ApplicationController
 
   	end
   end
+
+
+  def addClass
+
+    myClass = Username.create :department_code => params[:optone],  :course_number=> params[:opttwo],
+        :section_name=> params[:optthree]
+    
+  end
+
 end
