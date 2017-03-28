@@ -1,10 +1,35 @@
 <head>
-  <%= stylesheet_link_tag 'add_class', media: 'all' %>,
+  <%= stylesheet_link_tag 'add_class', media: 'all' %>
 <head>
 
 
+ <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+  		  
+		  <body>
+ 		 	<div class="menuBar">
+ 	<div id="menuBar">		 	<a href="#home">Study Buddy</a>
+ 		<div id="homeTitle">		 		<a href="#calender">Calender</a>
+ 			<font size="5"><label> Study Buddy </label></font>		 		<a href="#stats">Statistics</a>
+ 		<div class="dropdown">
+ 			<button id="dropbtn" class="dropbtn">Dropdown</button>
+ 			<div id="myDropdown" class="dropdown-content">
+ 				<a href="#about">About</a>
+ 				<a href="#base">Base</a>
+ 				<a href="#blog">Blog</a>
+ 				<a href="#contact">Contact</a>
+ 				<a href="#custom">Custom</a>
+ 				<a href="#support">Support</a>
+ 				<a href="#tools">Tools</a>
+ 			</div>
+  		</div>		  		</div>
+  	</div>		  	</div> </body>
 
-<h1>Add Courses</h1>
+  	
+
+
+
+
+<h1>Course Selection </h1>
 <%= javascript_tag do %>
 
 	var myCourses = gon.myCourses
@@ -61,25 +86,58 @@
 	}
 	<% end %>
 
+<div class="container">
+    <div class="row">
+        <div class ="col-md-6 col-sm-6">
 
-<form name="coursedropdown" id="coursedropdown">
-    <select name="optone" id="stateSel" size="1">
-        <option value="" selected="selected">Select department code</option>
-    </select>
-    <br>
-    <br>
-    <select name="opttwo" id="countySel" size="1">
-        <option value="" selected="selected">Please select course</option>
-    </select>
-    <br>
-    <br>
-    <select name="optthree" id="citySel" size="1">
-        <option value="" selected="selected">Please select section</option>
-    </select>
-</form>
+        	<h3>Add Courses</h3> 
+<%= form_tag("/add_class/addClass", method: "home") do %>
+	  <select name="optone" id="stateSel" size="1">
+	        <option value="" selected="selected">Select department code</option>
+	    </select>
+	    <br>
+	    <br>
+	    <br>
+	    <select name="opttwo" id="countySel" size="1">
+	        <option value="" selected="selected">Please select course</option>
+	    </select>
+	    <br>
+	    <br>
+	    <select name="optthree" id="citySel" size="1">
+	        <option value="" selected="selected" >Please select section</option>
+	    </select>
+  <%= submit_tag("Add Course") %>
+<% end %>
+            
+        </div>
+        <div class ="col-md-6 col-sm-6">
+            
+<h3>Remove Courses</h3> 
+<%= form_tag("/add_class/addClass", method: "home") do %>
+	  <select name="optone" id="stateSel" size="1">
+	        <option value="" selected="selected">Select department code</option>
+	    </select>
+	    <br>
+	    <br>
+	    <select name="opttwo" id="countySel" size="1">
+	        <option value="" selected="selected">Please select course</option>
+	    </select>
+	    <br>
+	    <br>
+	    <select name="optthree" id="citySel" size="1">
+	        <option value="" selected="selected" >Please select section</option>
+	    <br>
+	    </select>
+
+  <%= submit_tag("Remove Course") %>
+<% end %>
+        </div>
+    </div>
+</div>
+
 
 <spacer></spacer>
 
-<button type="button" class="btn btn-danger">Add Course</button>
+
 
 <p>An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>

@@ -23,12 +23,14 @@ curr_date = Time.now.strftime("%A %B %d %Y") %>
 </info>
 
 <h4> My Courses</h4>
-<div class="list-group">
-  <a href="#" class="list-group-item">Operating Systems</a>
-  <a href="#" class="list-group-item">Introduction to Artificial Intelligence</a>
-  <a href="#" class="list-group-item">RCOS</a>
-  <a href="#" class="list-group-item">Advanced Calculus</a>
-  <a href="#" class="list-group-item">Cognitive Psychology</a>
-</div>
+<% myList = Username.uniq.pluck(:course_number)
+%>
+
+  <div class="list-group">
+  <% myList.each do |course| %>
+      <a href="#" class="list-group-item"> <%= course %> </a>
+    
+  <% end %>
+  </div>
 
 <p>An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
