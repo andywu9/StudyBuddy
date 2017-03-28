@@ -7,7 +7,7 @@ html,body {
 }
 
 .menuBar {
-	background-color:blue;
+	background-color:#4f8cef;
 	border-bottom:3px solid black;
 	z-index:1;
 	overflow: hidden;
@@ -76,6 +76,21 @@ html,body {
 	font-size: 15pt;
 }
 
+.hidden{
+	display:none;
+}
+
+.planSelect {
+   overflow:hidden;
+   margin-bottom: 3%;
+   width:80%;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px black;
+   background: #white;
+}
+
 #finalStudy {
 	font-size: 25pt;
 }
@@ -93,7 +108,7 @@ html,body {
 	z-index:0;
 }
 
-#leftCol {
+#timerSideBar {
 	background-color: #99baff;
 	display: table-cell;
 	width: 15%;
@@ -111,9 +126,14 @@ html,body {
 	padding-left: 2%;
 }
 
-#timerButtons {
+.centeredButtons {
 	padding-top:20%;
 	padding-left:35%;
+}
+
+#planSubmitBtn {
+	margin-top: 5%;
+	margin-left: 17%;
 }
 
 .timerButton {

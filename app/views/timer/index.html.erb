@@ -7,7 +7,7 @@
 <body>
 	<div class="menuBar">
 		<a href="#home">Study Buddy</a>
-		<a href="#calender">Calender</a>
+		<a href="#calendar">Calendar</a>
 		<a href="#stats">Statistics</a>
 		<div class="dropdown">
 			<button id="dropbtn" class="dropbtn">Dropdown</button>
@@ -25,30 +25,50 @@
 
 
 	<div id="mainPageContainer">
-		<div id="leftCol">
+		<div id="timerSideBar">
 			<h1>
-				Timer
+				Pick a Study Plan! 
 			</h1>
 			
 			<form name="studytimef">
-			I want to study for 
-				<input type="text" name=t>
-				<select name="units">
-					<option value = "minutes">minutes</option>
-					<option value="hours">hours</option>
+				<select class="planSelect" id="planSelect" name="PlandropDown">
+					<option value="firstPlan" data-dur="3" data-type="hours" data-breaks="0" data-breakDur="0">Cram</option>
+					<option value="secondPlan">Lots of Breaks</option>
+					<option value="thirdPlan">Few But Long Breaks</option>
+					<option value="tmpPlan">Temporary Plan</option>
 				</select>
-			and take 
-				<input type="text" name="numbreaks"> breaks
-			that are
-				<input type="text" name="lenbreaks"> minutes long. 
-				<input type="submit" value="Start Studying!">
+				<br />
+				<a href="#profile">Create New Plan</a>
+
+				<br />
+				<br />
+				<div id="firstPlan">
+				</div>
+				<div id="secondPlan">
+				</div>
+				<div id="thirdPlan">
+				</div>
+				<div id="tmpPlan" class="hidden">
+					Create a temporary plan <br />
+					I want to study for <input type="text" name="duration">
+					<select name="units">
+						<option value = "minutes">minutes</option>
+						<option value="hours">hours</option>
+					</select>
+					and take 
+					<input type="text" name="numbreaks"> breaks
+					that are
+					<input type="text" name="lenbreaks"> minutes long. 
+				</div>
+				<!-- <input class="timerButton" id="planSubmitBtn" type="submit" value="Start Studying!"> -->
 			</form>
+
 			<div id="timer">
 				<div class="timeDigits" id="clock">
 					<label id="hours">00</label>:<label id="minutes">00</label>:<label id="seconds">00</label><label class="milli" id="millis">000</label>
 				</div>
 
-				<div id="timerButtons">
+				<div class="centeredButtons" id="timerButtons">
 						<button class="timerButton" id="startPauseButton">Start/Pause</button>
 						<p></p>
 						<button class="timerButton" id="restartButton">Restart</button>

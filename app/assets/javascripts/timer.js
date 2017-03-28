@@ -1,6 +1,6 @@
 window.onload = function() {
 
-
+    //=====menu bar dropdown=====
     var dropbtn = document.getElementById("dropbtn");
     dropbtn.onclick = displayDropdown;
 
@@ -9,6 +9,7 @@ window.onload = function() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
 
+    //makes dropdown menuu disappear if you click away from it
     window.onclick = function(e) {
       if (!e.target.matches('.dropbtn')) {
         var myDropdown = document.getElementById("myDropdown");
@@ -17,6 +18,28 @@ window.onload = function() {
           }
       }
     }
+
+    //=======plan creation========
+
+    $(document).on('change', '.planSelect', function() {
+        var planDrop = document.getElementById("planSelect");
+        $("#planSelect option").each(function() {
+            var hideElem = document.getElementById(this.value);
+            if(planDrop.options[planDrop.selectedIndex].value == hideElem.id) {
+                $(hideElem).removeClass('hidden');
+            }
+            else {
+                $(hideElem).addClass('hidden');
+            }
+        });
+    });
+    $(document).ready(function(){
+        $('.planSelect').trigger('change');
+    });
+
+
+
+    //=======main timer controls======
 
     var hoursLabel = document.getElementById("hours");
     var minutesLabel = document.getElementById("minutes");
