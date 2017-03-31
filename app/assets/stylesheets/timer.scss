@@ -1,0 +1,174 @@
+// Place all the styles related to the Timer controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,body {
+	font-family: 'Exo', sans-serif;
+}
+
+.menuBar {
+	background-color:#4f8cef;
+	border-bottom:3px solid black;
+	z-index:1;
+	overflow: hidden;
+}
+
+.menuBar a{
+	float: left;
+	font-size: 20px;
+	color: black;
+	text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown, .dropbtn {
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	color: black;
+	padding: 5px 6px;
+	background-color: inherit;
+	font-family: 'Exo', sans-serif;
+}
+
+.menuBar a:hover, .dropdown:hover, .dropbtn:hover {
+	background-color: #6dd0ff;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	background-color: #f9f9f9;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index:1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.show {
+	display:block;
+}
+
+.timeDigits {
+	font-size: 35pt;
+}
+
+.milli {
+	font-size: 15pt;
+}
+
+.hidden{
+	display:none;
+}
+
+.planSelect {
+   overflow:hidden;
+   margin-bottom: 3%;
+   width:80%;
+   -moz-border-radius: 9px 9px 9px 9px;
+   -webkit-border-radius: 9px 9px 9px 9px;
+   border-radius: 9px 9px 9px 9px;
+   box-shadow: 1px 1px 11px black;
+   background: #white;
+}
+
+#finalStudy {
+	font-size: 25pt;
+}
+
+#bottomTimer {
+	font-size: 35pt;
+}
+
+#mainPageContainer {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	height: 90%;
+	position:absolute;
+	z-index:0;
+}
+
+#timerSideBar {
+	background-color: #99baff;
+	display: table-cell;
+	width: 15%;
+	height: 100%;
+	padding-right: 0.5%;
+	padding-left: 0.5%;
+	color: #FFFFFF;
+ 	box-shadow:10px 0px 20px black;
+ 	position:relative;
+}
+
+#rightCol {
+	display: table-cell;
+	width: 70%;
+	padding-left: 2%;
+}
+
+.centeredButtons {
+	padding-top:20%;
+	padding-left:35%;
+}
+
+#planSubmitBtn {
+	margin-top: 5%;
+	margin-left: 17%;
+}
+
+.timerButton {
+	height:60px;
+	width:180px;
+	border-radius: 50px;
+	background-color: white;
+	border: none;
+	cursor:pointer;
+}
+
+.timerButton:hover {
+	background-color: #d4d5d8;
+}
+
+#timer {
+	height:50px;
+	width:150px;
+}
+
+#finBut {
+	position:absolute;
+	bottom: 0;
+	padding-bottom: 5%;
+	right: 0;
+	padding-right:26%;
+}
+
+#finishButton {
+	height:40px;
+	width:150px;
+}
+
+#finalTime {
+	position:absolute;
+	bottom: 0;
+	padding-bottom: 20%;
+}
