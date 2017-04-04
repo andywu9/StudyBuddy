@@ -1,8 +1,7 @@
-<head>
-  <%= stylesheet_link_tag 'home', media: 'all' %>,
-<head>
-  
-<%-# future use to pluck your courses from db -%>
+<!DOCTYPE html>
+
+
+  <%-# future use to pluck your courses from db -%>
  <% 
   myCourses = Course.uniq.pluck(:department_code)
   myCourses = myCourses.sort

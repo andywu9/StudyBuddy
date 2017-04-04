@@ -52,7 +52,8 @@ window.onload = function() {
     var interval;
     var stopTime = 0;
 
-    startPauseButton.onclick = startOrPause;
+    if(startPauseButton != null)
+        startPauseButton.onclick = startOrPause;
 
     document.body.onkeyup = function(e) {
         if(e.keyCode == 32) {
@@ -80,12 +81,15 @@ window.onload = function() {
         }
     }
 
-    restartButton.onclick = restart;
+    if(restartButton != null)
+        restartButton.onclick = restart;
 
     function restart() {
         stopTime = 0;
         clearInterval(interval)
         interval=null;
+        totalMilSeconds = 0
+        totalMilSecondsStart = 0
         millisLabel.innerHTML = pad(0) + "0";
         secondsLabel.innerHTML = pad(0);
         minutesLabel.innerHTML = pad(0);
@@ -138,7 +142,8 @@ window.onload = function() {
     var finishHoursLabel = document.getElementById("hoursFin");
     var finishButton = document.getElementById("finishButton");
 
-    finishButton.onclick = finish;
+    if(finishButton != null)
+        finishButton.onclick = finish;
 
     function finish() {
         clearInterval(interval);

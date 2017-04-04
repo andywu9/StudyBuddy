@@ -19,16 +19,12 @@ h3 {
 }
 
 .btn {
-	
-
 	margin-top: 10px;
 }
 
-body {
+.addclass {
     background-color:indianred;
     background-size:cover
-
-    
 }
 
   p {
@@ -38,12 +34,11 @@ body {
 }
 
 
-menuBar {
- 		
+.menuBar {
   	background-color:blue;		  
   	border-bottom:3px solid black;			
   	z-index:1;	
- 	overflow: hidden;
+ 	  overflow: hidden;
   }		  
 .menuBar a{
 	float: left;

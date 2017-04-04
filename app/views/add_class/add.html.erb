@@ -1,143 +1,85 @@
-<head>
-  <%= stylesheet_link_tag 'add_class', media: 'all' %>
-<head>
+<!DOCTYPE html>
 
-
- <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
   		  
-		  <body>
- 		 	<div class="menuBar">
- 	<div id="menuBar">		 	<a href="#home">Study Buddy</a>
- 		<div id="homeTitle">		 		<a href="#calender">Calender</a>
- 			<font size="5"><label> Study Buddy </label></font>		 		<a href="#stats">Statistics</a>
- 		<div class="dropdown">
- 			<button id="dropbtn" class="dropbtn">Dropdown</button>
- 			<div id="myDropdown" class="dropdown-content">
- 				<a href="#about">About</a>
- 				<a href="#base">Base</a>
- 				<a href="#blog">Blog</a>
- 				<a href="#contact">Contact</a>
- 				<a href="#custom">Custom</a>
- 				<a href="#support">Support</a>
- 				<a href="#tools">Tools</a>
- 			</div>
-  		</div>		  		</div>
-  	</div>		  	</div> </body>
+<body>
+ 	<div class="menuBar">
+ 		<div id="menuBar">		 	
+ 			<a href="#home">Study Buddy</a>
+ 			<div id="homeTitle">		 		
+ 				<a href="#calender">Calender</a>
+ 				<a href="#stats">Statistics</a>
+ 			<div class="dropdown">
+ 				<button id="dropbtn" class="dropbtn">Dropdown</button>
+ 					<div id="myDropdown" class="dropdown-content">
+		 				<a href="#about">About</a>
+		 				<a href="#base">Base</a>
+		 				<a href="#blog">Blog</a>
+		 				<a href="#contact">Contact</a>
+		 				<a href="#custom">Custom</a>
+		 				<a href="#support">Support</a>
+		 				<a href="#tools">Tools</a>
+ 					</div>
+  				</div>		
+  		  	</div>
+  		</div>	
+	</div> 
 
-  	
+	<h1>Course Selection </h1>
 
+	<div class="container addclass">
+	    <div class="row">
+	        <div class ="col-md-6 col-sm-6">
 
+	        	<h3>Add Courses</h3> 
+				<%= form_tag("/add_class/addClass", method: "home") do %>
+		  		<select name="optone" id="stateSel" size="1">
+		        	<option value="" selected="selected">Select department code</option>
+		    	</select>
+			    <br>
+			    <br>
+			    <br>
+			    <select name="opttwo" id="countySel" size="1">
+		        	<option value="" selected="selected">Please select course</option>
+		    	</select>
+		    	<br>
+		    	<br>
+		    	<select name="optthree" id="citySel" size="1">
+		        	<option value="" selected="selected" >Please select section</option>
+		    	</select>
+	 	 		<%= submit_tag("Add Course") %>
+				<% end %>
+	            
+	        </div>
+	        <div class ="col-md-6 col-sm-6">
+	            
+				<h3>Remove Courses</h3> 
+				<%= form_tag("/add_class/addClass", method: "home") do %>
+		  		<select name="optone" id="stateSel" size="1">
+		       		<option value="" selected="selected">Select department code</option>
+		    	</select>
+			    <br>
+			    <br>
+			    <select name="opttwo" id="countySel" size="1">
+			        <option value="" selected="selected">Please select course</option>
+			    </select>
+			    <br>
+			    <br>
+			    <select name="optthree" id="citySel" size="1">
+			        <option value="" selected="selected" >Please select section</option>
+			    	<br>
+			    </select>
 
-
-<h1>Course Selection </h1>
-<%= javascript_tag do %>
-
-	var myCourses = gon.myCourses
-	var dict = gon.dict
-
-
-
-	var stateObject = dict
-	    
-	window.onload = function () {
-	    var stateSel = document.getElementById("stateSel"),
-	        countySel = document.getElementById("countySel"),
-	        citySel = document.getElementById("citySel");
-	    for (var state in stateObject) {
-	        stateSel.options[stateSel.options.length] = new Option(state, state);
-	    }
-	    stateSel.onchange = function () {
-	        countySel.length = 1; // remove all options bar first
-	        citySel.length = 1; // remove all options bar first
-	        if (this.selectedIndex < 1) {
-	          countySel.options[0].text = "Please select Department"
-	          citySel.options[0].text = "Please select Course"
-	          return; // done   
-	        }  
-	        countySel.options[0].text = "Please select Section"
-	        for (var county in stateObject[this.value]) {
-	            countySel.options[countySel.options.length] = new Option(county, county);
-	        }
-	        if (countySel.options.length==2) {
-	          countySel.selectedIndex=1;
-	          countySel.onchange();
-	        }  
-	        
-	    }
-	    stateSel.onchange(); // reset in case page is reloaded
-	    countySel.onchange = function () {
-	        citySel.length = 1; // remove all options bar first
-	        if (this.selectedIndex < 1) {
-	          citySel.options[0].text = "Please select course first"
-	          return; // done   
-	        }  
-	        citySel.options[0].text = "Please select Section"
-	        
-	        var cities = stateObject[stateSel.value][this.value];
-	        for (var i = 0; i < cities.length; i++) {
-	            citySel.options[citySel.options.length] = new Option(cities[i], cities[i]);
-	        }
-	        if (citySel.options.length==2) {
-	          citySel.selectedIndex=1;
-	          citySel.onchange();
-	        }  
-	        
-	    }
-	}
-	<% end %>
-
-<div class="container">
-    <div class="row">
-        <div class ="col-md-6 col-sm-6">
-
-        	<h3>Add Courses</h3> 
-<%= form_tag("/add_class/addClass", method: "home") do %>
-	  <select name="optone" id="stateSel" size="1">
-	        <option value="" selected="selected">Select department code</option>
-	    </select>
-	    <br>
-	    <br>
-	    <br>
-	    <select name="opttwo" id="countySel" size="1">
-	        <option value="" selected="selected">Please select course</option>
-	    </select>
-	    <br>
-	    <br>
-	    <select name="optthree" id="citySel" size="1">
-	        <option value="" selected="selected" >Please select section</option>
-	    </select>
-  <%= submit_tag("Add Course") %>
-<% end %>
-            
-        </div>
-        <div class ="col-md-6 col-sm-6">
-            
-<h3>Remove Courses</h3> 
-<%= form_tag("/add_class/addClass", method: "home") do %>
-	  <select name="optone" id="stateSel" size="1">
-	        <option value="" selected="selected">Select department code</option>
-	    </select>
-	    <br>
-	    <br>
-	    <select name="opttwo" id="countySel" size="1">
-	        <option value="" selected="selected">Please select course</option>
-	    </select>
-	    <br>
-	    <br>
-	    <select name="optthree" id="citySel" size="1">
-	        <option value="" selected="selected" >Please select section</option>
-	    <br>
-	    </select>
-
-  <%= submit_tag("Remove Course") %>
-<% end %>
-        </div>
-    </div>
-</div>
+				<%= submit_tag("Remove Course") %>
+				<% end %>
+	        </div>
+	    </div>
+	</div>
 
 
-<spacer></spacer>
+	<spacer></spacer>
 
 
 
-<p>An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+	<p>An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+</body>

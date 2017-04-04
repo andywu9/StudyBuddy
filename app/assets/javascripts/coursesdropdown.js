@@ -1,4 +1,3 @@
-
 window.onload = function () {
     var stateSel = document.getElementById("stateSel"),
         countySel = document.getElementById("countySel"),

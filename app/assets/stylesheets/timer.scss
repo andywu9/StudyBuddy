@@ -81,6 +81,7 @@ html,body {
 }
 
 .planSelect {
+   color:black;
    overflow:hidden;
    margin-bottom: 3%;
    width:80%;
@@ -128,8 +129,9 @@ html,body {
 
 .centeredButtons {
 	padding-top:20%;
-	padding-left:35%;
+	padding-left:25%;
 }
+
 
 #planSubmitBtn {
 	margin-top: 5%;
@@ -137,6 +139,7 @@ html,body {
 }
 
 .timerButton {
+	color: black;
 	height:60px;
 	width:180px;
 	border-radius: 50px;
@@ -151,7 +154,7 @@ html,body {
 
 #timer {
 	height:50px;
-	width:150px;
+	width:250px;
 }
 
 #finBut {
