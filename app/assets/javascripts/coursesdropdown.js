@@ -1,4 +1,5 @@
-window.onload = function () {
+$(function() {
+  if($('body').is('.addclass')) {
     var stateSel = document.getElementById("stateSel"),
         countySel = document.getElementById("countySel"),
         citySel = document.getElementById("citySel");
@@ -25,21 +26,21 @@ window.onload = function () {
     }
     stateSel.onchange(); // reset in case page is reloaded
     countySel.onchange = function () {
-        citySel.length = 1; // remove all options bar first
-        if (this.selectedIndex < 1) {
-          citySel.options[0].text = "Please select county first"
-          return; // done   
-        }  
-        citySel.options[0].text = "Please select city"
-        
-        var cities = stateObject[stateSel.value][this.value];
-        for (var i = 0; i < cities.length; i++) {
-            citySel.options[citySel.options.length] = new Option(cities[i], cities[i]);
-        }
-        if (citySel.options.length==2) {
-          citySel.selectedIndex=1;
-          citySel.onchange();
-        }  
-        
+      citySel.length = 1; // remove all options bar first
+      if (this.selectedIndex < 1) {
+        citySel.options[0].text = "Please select county first"
+        return; // done   
+      }  
+      citySel.options[0].text = "Please select city"
+      
+      var cities = stateObject[stateSel.value][this.value];
+      for (var i = 0; i < cities.length; i++) {
+          citySel.options[citySel.options.length] = new Option(cities[i], cities[i]);
+      }
+      if (citySel.options.length==2) {
+        citySel.selectedIndex=1;
+        citySel.onchange();
+      }  
     }
-}
+  }
+});

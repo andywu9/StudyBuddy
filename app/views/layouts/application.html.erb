@@ -6,7 +6,23 @@
     <%= include_gon %>
     <%= csrf_meta_tags %>
 
-
+    <div class="menuBar">
+      <a href="#home">Study Buddy</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#stats">Statistics</a>
+      <div class="dropdown">
+        <button id="dropbtn" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#about">About</a>
+          <a href="#base">Base</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="#custom">Custom</a>
+          <a href="#support">Support</a>
+          <a href="#tools">Tools</a>
+        </div>
+      </div>
+    </div>
   
     <div id="user_nav">
       <% if user_signed_in? %>
