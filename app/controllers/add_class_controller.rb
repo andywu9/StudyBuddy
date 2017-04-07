@@ -41,7 +41,12 @@ class AddClassController < ApplicationController
       myid = id[-1] +1
     end
 
-    mySchedule = Event.create :id => myid , :title => params[:opttwo] , :start_time => time1, :end_time => ending[0], :dow => [1,4]
+  
+     days  =  Period.where(" section_name = ? AND course_name = ? AND department_code = ? ",
+     params[:optthree], params[:opttwo], params[:optone]).pluck(:day).uniq
+
+
+    mySchedule = Event.create :id => myid , :title => params[:opttwo] , :start_time => time1, :end_time => ending[0], :dow => days
 
     
   end
