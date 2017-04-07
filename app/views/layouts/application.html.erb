@@ -7,8 +7,8 @@
     <%= csrf_meta_tags %>
 
     <div class="menuBar">
-      <a href="#home">Study Buddy</a>
-      <a href="#calendar">Calendar</a>
+      <a  <%= link_to "Study Buddy", home_homepage_path%> </a> 
+      <a  <%= link_to "Calendar", calendar_myCalendar_path%> </a>
       <a href="#stats">Statistics</a>
       <div class="dropdown">
         <button id="dropbtn" class="dropbtn">Dropdown</button>
