@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get 'add_class/add'
 
   post 'add_class/addClass'
-  get 'add_class/new'
 
   get 'calendar/myCalendar'
 

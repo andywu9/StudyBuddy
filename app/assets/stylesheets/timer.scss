@@ -6,68 +6,6 @@ html,body {
 	font-family: 'Exo', sans-serif;
 }
 
-.menuBar {
-	background-color:#4f8cef;
-	border-bottom:3px solid black;
-	z-index:1;
-	overflow: hidden;
-}
-
-.menuBar a{
-	float: left;
-	font-size: 20px;
-	color: black;
-	text-align: center;
-    padding: 10px 10px;
-    text-decoration: none;
-}
-
-.dropdown {
-	float: left;
-	overflow: hidden;
-}
-
-.dropdown, .dropbtn {
-	cursor: pointer;
-	font-size: 20px;
-	border: none;
-	outline: none;
-	color: black;
-	padding: 5px 6px;
-	background-color: inherit;
-	font-family: 'Exo', sans-serif;
-}
-
-.menuBar a:hover, .dropdown:hover, .dropbtn:hover {
-	background-color: #6dd0ff;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	min-width: 160px;
-	background-color: #f9f9f9;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index:1;
-}
-
-.dropdown-content a {
-	float: none;
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-	background-color: #ddd;
-}
-
-.show {
-	display:block;
-}
-
 .timeDigits {
 	font-size: 35pt;
 }

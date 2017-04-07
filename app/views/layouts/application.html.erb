@@ -7,10 +7,11 @@
     <%= csrf_meta_tags %>
 
     <div class="menuBar">
-      <a href="#home">Study Buddy</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#stats">Statistics</a>
-      <div class="dropdown">
+      <a href="../../home/homepage">Study Buddy</a>
+      <a href="../../add_class/add">Add a Course</a>
+      <a href="../../calendar/myCalendar">Calendar</a>
+      <a href="../../timer/index">Timer Page</a>
+      <!-- <div class="dropdown">
         <button id="dropbtn" class="dropbtn">Dropdown</button>
         <div id="myDropdown" class="dropdown-content">
           <a href="#about">About</a>
@@ -21,16 +22,16 @@
           <a href="#support">Support</a>
           <a href="#tools">Tools</a>
         </div>
+      </div> -->
+
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+        <% end %>
       </div>
-    </div>
-  
-    <div id="user_nav">
-      <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>. Not you?
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-      <% end %>
     </div>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>

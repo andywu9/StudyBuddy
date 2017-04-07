@@ -3,13 +3,13 @@
 <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
   		  
 <body class="addclass">
-	<h1>Course Selection </h1>
+	<h1 class="courseTitle">Course Selection </h1>
 
 	<div class="container">
 	    <div class="row">
 	        <div class ="col-md-6 col-sm-6">
 
-	        	<h3>Add Courses</h3> 
+	        	<h3 class="addSubTitle">Add Courses</h3> 
 				<%= form_tag("/add_class/addClass", method: "home") do %>
 		  		<select name="optone" id="stateSel" size="1">
 		        	<option value="" selected="selected">Select department code</option>
@@ -59,5 +59,5 @@
 
 
 
-	<p>An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+	<p class="creatorTag">An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
 </body>

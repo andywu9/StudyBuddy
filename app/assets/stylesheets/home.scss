@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-h1 {
+.homeTitle {
 	padding-bottom: 40px;
 	color: white;
 	text-align: center;
@@ -26,7 +26,7 @@ hello {
 
  }
 
- h4 {
+ .courseListHeader {
  	color: white;
  }
 
@@ -39,7 +39,7 @@ info {
 
 }
 
-body {
+.homePage {
     background-size: 100% ;
     background-image : url("emac.jpg");
 }
@@ -62,7 +62,7 @@ body {
 	
 }
 
-p {
+.creatorTag {
     position: fixed;
     bottom: 0;
     color: white;

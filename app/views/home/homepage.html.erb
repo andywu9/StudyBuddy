@@ -11,7 +11,7 @@
   <% curr_time = Time.now.strftime("%I:%M %p")
   curr_date = Time.now.strftime("%A %B %d %Y") %>
 
-  <h1>Welcome to Study Buddy</h1>
+  <h1 class="homeTitle">Welcome to Study Buddy</h1>
   <% if user_signed_in? %>
     <hello>Hello <%= current_user.email %>,</hello>
   <% end %>
@@ -21,7 +21,7 @@
     <%= "Today is #{curr_date} and the time is currently #{curr_time}." %> 
   </info>
 
-  <h4> My Courses</h4>
+  <h4 class="courseListHeader"> My Courses</h4>
   <% myList = Username.uniq.pluck(:course_number)
   %>
 
@@ -32,5 +32,5 @@
     <% end %>
     </div>
 
-  <p>An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+  <p class="creatorTag">An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
 </body>
