@@ -1,6 +1,6 @@
 class AddClassController < ApplicationController
 
-  $start_id = 15
+  
 
   def add
   	
@@ -33,9 +33,16 @@ class AddClassController < ApplicationController
 
     time1 = start[0][0] + start[0][1] + ':' + start[0][2] + start[0][3]
     time2 = ending[0][0] + ending[0][1] + ':' + ending[0][2] + ending[0][3]
-    mySchedule = Event.create :id => $start_id , :title => params[:opttwo] , :start_time => time1, :end_time => ending[0], :dow => [1,4]
 
-    $start_id = $start_id + 1
+    id = Event.uniq.pluck(:id).sort
+    if id == []
+      myid = 0
+    else
+      myid = id[-1] +1
+    end
+
+    mySchedule = Event.create :id => myid , :title => params[:opttwo] , :start_time => time1, :end_time => ending[0], :dow => [1,4]
+
     
   end
 
