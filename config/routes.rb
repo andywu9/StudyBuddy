@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
   resources :events
-  get 'add_class/add'
-
-  post 'add_class/addClass'
+  get 'add_class/add' 
+  post 'add_class/add'
 
   get 'calendar/myCalendar'
 
