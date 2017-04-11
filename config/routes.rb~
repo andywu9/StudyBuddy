@@ -1,17 +1,21 @@
 Rails.application.routes.draw do
 
-  get 'add_class/add'
-
+  resources :events
+  get 'add_class/add' 
   post 'add_class/addClass'
-  get 'add_class/new'
+
+  get 'remove_class/remove'
+  post 'remove_class/removeClass'
 
   get 'calendar/myCalendar'
 
   get 'class_options/new'
 
   get 'home/homepage'
+  post 'home/homepage'
 
   get 'timer/index'
+
 
   devise_for :users
   get 'sign_up/signin'

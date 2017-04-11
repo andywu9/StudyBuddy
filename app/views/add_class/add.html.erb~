@@ -26,7 +26,7 @@
 		    		</select>
 				<br>
 				<br>
-	 	 	<%= submit_tag "Add Course", data: {confirm: "Class added successfully!"}%>
+	 	 	<%= submit_tag "Add Course", data: {confirm: "Class added Successfully!"}%>
 			<% end %>
 	    
 		</div>
