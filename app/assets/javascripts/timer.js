@@ -1,22 +1,22 @@
 $(function() {
 
     //=====menu bar dropdown=====
-    var dropbtn = document.getElementById("dropbtn");
-    dropbtn.onclick = displayDropdown;
+    // var dropbtn = document.getElementById("dropbtn");
+    // dropbtn.onclick = displayDropdown;
 
-    function displayDropdown() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
+    // function displayDropdown() {
+    //     document.getElementById("myDropdown").classList.toggle("show");
+    // }
 
-    //makes dropdown menu disappear if you click away from it
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-        var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains('show')) {
-            myDropdown.classList.remove('show');
-          }
-      }
-    }
+    // //makes dropdown menu disappear if you click away from it
+    // window.onclick = function(e) {
+    //   if (!e.target.matches('.dropbtn')) {
+    //     var myDropdown = document.getElementById("myDropdown");
+    //       if (myDropdown.classList.contains('show')) {
+    //         myDropdown.classList.remove('show');
+    //       }
+    //   }
+    // }
 
     if($('body').is('.timerPage')) {
         //=======plan creation========

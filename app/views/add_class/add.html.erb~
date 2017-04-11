@@ -11,21 +11,19 @@
 
 	        	<h3 class="addSubTitle">Add Courses</h3> 
 			<%= form_tag("/add_class/addClass", method: "home") do %>
-		  		<select name="optone" id="stateSel" size="1">
-		        		<option value="" selected="selected">Select department code</option>
-		    		</select>
-			    	<br>
-			    	<br>
-			    	<select name="opttwo" id="countySel" size="1">
-		        		<option value="" selected="selected">Please select course</option>
-		    		</select>
-		    		<br>
-		    		<br>
-		    		<select name="optthree" id="citySel" size="1">
-		        		<option value="" selected="selected" >Please select section</option>
-		    		</select>
-				<br>
-				<br>
+		  	<select name="optone" id="courseSel" size="1">
+		        	<option value="" selected="selected">Select department code</option>
+		    	</select>
+			<br>
+			<br>
+			<select name="opttwo" id="sectionSel" size="1">
+		        	<option value="" selected="selected">Please select course</option>
+		    	</select>
+		    	<br>
+		    	<br>
+		    	<select name="optthree" id="finalSel" size="1">
+		        	<option value="" selected="selected" >Please select section</option>
+		    	</select>
 	 	 	<%= submit_tag "Add Course", data: {confirm: "Class added Successfully!"}%>
 			<% end %>
 	    

@@ -3,16 +3,18 @@ Rails.application.routes.draw do
   resources :events
   get 'add_class/add' 
   post 'add_class/addClass'
+<<<<<<< HEAD
 
   get 'remove_class/remove'
   post 'remove_class/removeClass'
+=======
+>>>>>>> 64cf72095d1cfc17b4236f17fb7000e4b0313abd
 
   get 'calendar/myCalendar'
 
   get 'class_options/new'
 
   get 'home/homepage'
-  post 'home/homepage'
 
   get 'timer/index'
 
