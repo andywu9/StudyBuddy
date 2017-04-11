@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-h1 {
+h1 { 	 	
 	color: white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
@@ -25,10 +25,9 @@ h3 {
     font-size: 18px;
 }
 
-#sign-up-container {
-    padding-top: 20px;
+body {
     background-size: 100% ;
-    background-image : url("empacnight.jpg");
+    background-image : url("empacnight.jpeg");
 }
 
 .field{

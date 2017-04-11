@@ -5,7 +5,7 @@
 	overflow: hidden;
 }
 
-.menuBar a{
+.menuButtons a{
 	float: left;
 	font-size: 20px;
 	color: black;
@@ -30,7 +30,7 @@
 	font-family: 'Exo', sans-serif;
 }
 
-.menuBar a:hover, .dropdown:hover, .dropbtn:hover {
+.menuButtons a:hover {
 	background-color: #6dd0ff;
 }
 
@@ -63,4 +63,12 @@
 #user_nav {
 	float: right;
 	text-align: right;
+	vertical-align: middle;
+	padding-top: .7%;
+	padding-right: .5%;
+	font-size: 12pt;
+}
+
+#user_nav a{
+	color: #194387;
 }
