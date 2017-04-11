@@ -1,59 +1,51 @@
-/*// Place all the styles related to the sign_up controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-h1 { 	 	
+.StudyBuddy {
 	color: white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	padding: 10px;
-	font-weight: bold;
-	font-size: 50px;
 }
 
-h2 {
+.SignUp{
 	color: white;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	padding: 10px;
-	font-weight: 600;
+
 }
 
-h3 {
+.signedup{
 	color: white;
     font-size: 18px;
 }
 
-body {
+.newSignIn {
     background-size: 100% ;
-    background-image : url("empacnight.jpeg");
+    background-image : url("emac.jpg");
 }
-
 .field{
 	text-align: center;
-	color: white;
+	color: black;
 	font-size: 18px;
 	margin-top: 5px;
+
 }
 
-.actions{	
+.actions{
+	
 	font-size: 18px;
 	postion: fixed;
 	margin-top: 10px;
     text-align: center;
+
+	
 }
 
-input {
-	color: black;
-}
-
-
-p{
+p {
     position: fixed;
     bottom: 0;
     color: white;
 }
+
 
 
 .link{
@@ -63,4 +55,3 @@ p{
 }
 
 
-*/
