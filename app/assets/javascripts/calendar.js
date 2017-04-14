@@ -1,8 +1,12 @@
 $(document).ready(function() {
 
+    // run the js only on calendar view
     if($('body').is('.myCalendar')) {
   
         $('#calendar').fullCalendar({
+
+            //Calendar Setup
+            //======================================================================
             header: {
                 left: 'prev,next today',
                 center: 'title',
@@ -10,10 +14,13 @@ $(document).ready(function() {
             },
             selectable: true,
             defaultView: 'agendaWeek',
-    		editable: true,
-    		minTime: "07:00:00",
+    		editable: true, // allow users to add events
+    		minTime: "07:00:00", // set the calendars hourly view restrictions
     	 	maxTime: "22:00:00",
-    		events: '/events.json',
+    		events: '/events.json', // use a json feed from the events model to populate
+            //======================================================================
+
+            // add events from page itself
             eventRender: function(event, element) {
                 element.attr('title', event.tip);
            },
