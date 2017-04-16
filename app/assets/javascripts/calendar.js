@@ -10,10 +10,13 @@ $(document).ready(function() {
             },
             selectable: true,
             defaultView: 'agendaWeek',
-    		editable: true,
-    		minTime: "07:00:00",
-    	 	maxTime: "22:00:00",
-    		events: '/events.json',
+        		editable: true,
+        		minTime: "07:00:00",
+        	 	maxTime: "22:00:00",
+        		events: '/events.json',
+
+
+                
             eventRender: function(event, element) {
                 element.attr('title', event.tip);
            },
