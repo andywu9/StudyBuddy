@@ -1,15 +1,11 @@
 require 'yajl'
 
-
-file_stream = File.open("yacs.json","r")
-count = 10
+file_stream = File.open("yacs.json","r") #holds data from yacs api
 json = Yajl::Parser.parse(file_stream)
 
-myCourses = Array.new
+json['courses'].each do |course| # for each course
 
-
-json['courses'].each do |course| 
-
+	#parse the respective fields
 	id = "#{course['id']}"
 	course_name = "#{course['name']}"
 	number = "#{course['number']}"
@@ -22,6 +18,8 @@ json['courses'].each do |course|
 	section_name = ""
 	crn = ""
 	num_periods  = ""
+
+	# parse each individual section
 	sections.each do |myclass|
 		
 		crn = myclass['crn']
@@ -34,6 +32,7 @@ json['courses'].each do |course|
 		seats = myclass['seats']
 		seats_taken = "#{myclass['seats_taken']}"
 
+		#parse each day the class meets
 		periods.each do |myPeriod|
 
 			day = myPeriod["day"]
@@ -41,28 +40,15 @@ json['courses'].each do |course|
 			startTime = myPeriod["start"]
 			type = myPeriod["type"]
 
-p = Period.create :department_code => department_code, :course_name=> course_name, :course_number=> number,
+		# add the information to the period database
+		p = Period.create :department_code => department_code, :course_name=> course_name, :course_number=> number,
    			:section_name=> section_name, :day=> day , :start_time=>startTime , :end_time=>endTime , :course_type=>type 
 
 		end
-
-
-		
-
 	end
-
+  # add the course information to the course database
   c  = Course.create :department_code => department_code, :course_name => course_name, :course_number=> number,
    :section_name=> section_name, :crn => crn, :num_periods => num_periods
-
-  
-
-
-
-
-
 end
 
-
-
-
-file_stream.close()
+file_stream.close()  #close yacs.json
