@@ -1,10 +1,42 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>StudyBuddy</title>
+    <%= include_gon %>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <div class="menuBar">
+      <div class="menuButtons">
+      <a href="../../home/homepage">Study Buddy</a>
+      <a href="../../add_class/add">Add a Course</a>
+      <a href="../../calendar/myCalendar">Calendar</a>
+      <a href="../../timer/index">Timer Page</a>
+    </div>
+      <!-- <div class="dropdown">
+        <button id="dropbtn" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#about">About</a>
+          <a href="#base">Base</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="#custom">Custom</a>
+          <a href="#support">Support</a>
+          <a href="#tools">Tools</a>
+        </div>
+      </div> -->
+
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 

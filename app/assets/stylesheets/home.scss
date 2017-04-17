@@ -1,0 +1,79 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.homeTitle {
+	padding-bottom: 40px;
+	color: white;
+	text-align: center;
+	font-family: "Verdana", sans-serif;
+
+}
+
+hello {
+	padding-top: 10px;
+	color: white;
+    font-size: 18px;
+}
+
+.list-group { 
+ 	background:none;
+    margin: 50px; 
+    min-width: 400px;
+    text-allign: center;
+    width: 40%;
+
+ }
+
+ .courseListHeader {
+ 	color: white;
+ }
+
+
+info {
+	padding-top: 5px;
+    text-align: right;
+	color:  white;
+    font-size: 18px;
+
+}
+
+.homePage {
+    background-size: 100% ;
+    background-image : url("emac.jpg");
+}
+
+.field{
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	margin-top: 5px;
+
+}
+
+.actions{
+	
+	font-size: 18px;
+	postion: fixed;
+	margin-top: 10px;
+    text-align: center;
+
+	
+}
+
+.creatorTag {
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+
+
+
+.link{
+    text-align: center;
+	color: blue;
+	font-size: 18px;
+}
+
+

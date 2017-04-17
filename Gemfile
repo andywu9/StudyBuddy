@@ -7,8 +7,23 @@ git_source(:github) do |repo_name|
 end
 
 
+gem  'bootstrap-sass', '~> 3.3.7'
+gem  'autoprefixer-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
+
+gem 'yajl-ruby'
+gem 'gon'
+
+gem 'fullcalendar-rails' 
+gem 'momentjs-rails'
+
+gem 'react-rails', '~> 1.7', '>= 1.7.1'
+
+
+gem 'devise', '~> 4.2'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -21,6 +36,19 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+#Charts for timer page 
+gem "chartkick"
+
+
+
+
+
+
+
+
+
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
