@@ -158,6 +158,35 @@ $(function() {
             finishSecondsLabel.innerHTML = pad(parseInt(milSeconds/1000));
             finishMillisLabel.innerHTML = padMil(milSeconds%1000);
         }
+
+
+        var studyPlanGraph = document.getElementById("studyPlanChart");
+        var studyDonut = new Chart(studyPlanGraph, {
+            type: "doughnut",
+            data: {
+                labels: ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6"],
+                datasets: [{
+                    label: '# of hours',
+                    data: [2, 1, 3, 3, 2, 2],
+                    backgroundColor: [
+                    "#ff5144",
+                    "#9bff44",
+                    "#44ffec",
+                    "#446fff",
+                    "#f23cd3",
+                    "#f1df3b"
+                    ]
+                }]
+                 
+            },
+            options: {
+                cutoutPercentage: 80,
+                animation:{
+                    animateScale: true
+                },
+                responsive: false
+            }
+        });
     }
 });
 
