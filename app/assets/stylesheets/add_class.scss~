@@ -1,0 +1,28 @@
+// Place all the styles related to the addClass controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.courseTitle {
+	padding-bottom: 40px;
+	color: Black;
+	text-align: center;
+	font-family: "Verdana", sans-serif;
+
+}
+
+.addSubTitle {
+	padding-bottom: 20px;
+	
+	font-family: "Verdana", sans-serif;
+
+}
+
+.btn {
+	margin-top: 10px;
+}
+
+.addclass {
+    background-color:indianred;
+    background-size:cover
+}

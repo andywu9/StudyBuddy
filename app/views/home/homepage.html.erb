@@ -2,7 +2,7 @@
 <body class="homePage">
 
     <%-# future use to pluck your courses from db -%>
-   <% 
+    <% 
     myCourses = Course.uniq.pluck(:department_code)
     myCourses = myCourses.sort
      
@@ -11,24 +11,26 @@
   <% curr_time = Time.now.strftime("%I:%M %p")
   curr_date = Time.now.strftime("%A %B %d %Y") %>
 
-  <h1 class="homeTitle">Welcome to Study Buddy</h1>
+  <div class="homeTitle">Welcome to Study Buddy</div>
+  
   <% if user_signed_in? %>
-    <hello>Hello <%= current_user.email %>,</hello>
+    <hello>Hello <%= current_user.email %>.</hello>
   <% end %>
-
-   
+  <br>
   <info>
     <%= "Today is #{curr_date} and the time is currently #{curr_time}." %> 
   </info>
 
-  <h4 class="courseListHeader"> My Courses</h4>
-  <% myList = Username.uniq.pluck(:course_number)
-  %>
+  <br>
+  <br>
+  <br>
+  
+  <div class="courseListHeader"> My Courses</div>
+  <% myList = Username.uniq.pluck(:course_number) %>
 
     <div class="list-group">
     <% myList.each do |course| %>
         <a href="#" class="list-group-item"> <%= course %> </a>
-      
     <% end %>
     </div>
 

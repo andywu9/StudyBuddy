@@ -50,7 +50,7 @@ class AddClassController < ApplicationController
     else
       myid = id[-1] +1
     end
-
+    
     # add the event to the events db using the  title , start, end and days of week info
     mySchedule = Event.create :id => myid , :title => params[:opttwo] , :start_time => time1, :end_time => ending[0], :dow => days
 

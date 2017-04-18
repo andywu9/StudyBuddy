@@ -18,6 +18,7 @@ $(document).ready(function() {
     		minTime: "07:00:00", // set the calendars hourly view restrictions
     	 	maxTime: "22:00:00",
     		events: '/events.json', // use a json feed from the events model to populate
+            
             //======================================================================
 
             // add events from page itself
