@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   resources :events
   get 'add_class/add' 
   post 'add_class/addClass'
@@ -14,6 +13,8 @@ Rails.application.routes.draw do
   get 'home/homepage'
 
   get 'timer/index'
+  
+  get 'create_plan/index'
 
 
   devise_for :users
