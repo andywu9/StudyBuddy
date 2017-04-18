@@ -5,9 +5,10 @@
 <body class="addclass">
 	<h1 class="courseTitle">Course Selection </h1>
 
+
 	<div class="container">
 	    <div class="row">
-	        <div class ="col-md-6 col-sm-6">
+	        <div class ="col-md-2 col-sm-2 col-md-offset-5 ">
 
 	        	<h3 class="addSubTitle">Add Courses</h3> 
 			<%= form_tag("/add_class/addClass", method: "home") do %>
@@ -24,6 +25,8 @@
 		    	<select name="optthree" id="finalSel" size="1">
 		        	<option value="" selected="selected" >Please select section</option>
 		    	</select>
+		    	<br>
+		    	<br>
 	 	 	<%= submit_tag "Add Course", data: {confirm: "Class added Successfully!"}%>
 			<% end %>
 	    
