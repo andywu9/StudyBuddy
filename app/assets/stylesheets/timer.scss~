@@ -53,8 +53,7 @@
 }
 
 #timerSideBar {
-	/*background-color: #99baff;*/
-	background-color: indianred;
+	background-color: #99baff;
 	display: table-cell;
 	width: 15%;
 	height: 100%;

@@ -15,8 +15,7 @@
   
   <% if user_signed_in? %>
     <hello>Hello <%= current_user.email %>.</hello>
-  <% end %>
-  <br>
+  <% end %> 
   <info>
     <%= "Today is #{curr_date} and the time is currently #{curr_time}." %> 
   </info>

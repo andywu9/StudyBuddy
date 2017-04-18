@@ -1,6 +1,5 @@
 .menuBar {
-	/*background-color:#4f8cef;*/
-	background-color: white;
+	background-color:#4f8cef;
 	border-bottom:3px solid black;
 	z-index:1;
 	overflow: hidden;
