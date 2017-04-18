@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+  		  
+<body class="removeclass">
+	<h1 class="courseTitle">Course Selection </h1>
+
+	<div class="container">
+	    <div class="row">
+	        <div class ="col-md-6 col-sm-6">
+	            
+			<h3>Remove Courses</h3>
+			<br>
+			<%= form_tag("/remove_class/removeClass", method: "home") do %>
+		  		<select name="optone" id="classSel" size="1">
+		       			<option value="" selected="selected">Select course to drop</option>
+		    		</select>
+			    	<br>
+				<br>
+			<%= submit_tag "Remove Course", data: {confirm: "Class removed successfully!"} %>
+			<% end %>
+	        </div>
+	    </div>
+	</div>
+
+
+	<spacer></spacer>
+
+
+
+	<p class="creatorTag">An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+</body>

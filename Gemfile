@@ -16,7 +16,7 @@ gem 'rails', '~> 5.0.1'
 gem 'yajl-ruby'
 gem 'gon'
 
-gem 'fullcalendar-rails'
+gem 'fullcalendar-rails' 
 gem 'momentjs-rails'
 
 gem 'react-rails', '~> 1.7', '>= 1.7.1'
@@ -37,6 +37,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#Charts for timer page 
+gem "chartkick"
 
 
 

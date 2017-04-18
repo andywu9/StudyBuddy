@@ -1,36 +1,38 @@
-<head>
-  <%= stylesheet_link_tag 'home', media: 'all' %>,
-<head>
+<!DOCTYPE html>
+<body class="homePage">
+
+    <%-# future use to pluck your courses from db -%>
+    <% 
+    myCourses = Course.uniq.pluck(:department_code)
+    myCourses = myCourses.sort
+     
+    %>
+
+  <% curr_time = Time.now.strftime("%I:%M %p")
+  curr_date = Time.now.strftime("%A %B %d %Y") %>
+
+  <div class="homeTitle">Welcome to Study Buddy</div>
   
-<%-# future use to pluck your courses from db -%>
- <% 
-  myCourses = Course.uniq.pluck(:department_code)
-  myCourses = myCourses.sort
-   
-  %>
-
-<% curr_time = Time.now.strftime("%I:%M %p")
-curr_date = Time.now.strftime("%A %B %d %Y") %>
-
-<h1>Welcome to Study Buddy</h1>
-<% if user_signed_in? %>
-  <hello>Hello <%= current_user.email %>,</hello>
-<% end %>
-
- 
-<info>
-  <%= "Today is #{curr_date} and the time is currently #{curr_time}." %> 
-</info>
-
-<h4> My Courses</h4>
-<% myList = Username.uniq.pluck(:course_number)
-%>
-
-  <div class="list-group">
-  <% myList.each do |course| %>
-      <a href="#" class="list-group-item"> <%= course %> </a>
-    
+  <% if user_signed_in? %>
+    <hello>Hello <%= current_user.email %>.</hello>
   <% end %>
-  </div>
+  <br>
+  <info>
+    <%= "Today is #{curr_date} and the time is currently #{curr_time}." %> 
+  </info>
 
-<p>An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+  <br>
+  <br>
+  <br>
+  
+  <div class="courseListHeader"> My Courses</div>
+  <% myList = Username.uniq.pluck(:course_number) %>
+
+    <div class="list-group">
+    <% myList.each do |course| %>
+        <a href="#" class="list-group-item"> <%= course %> </a>
+    <% end %>
+    </div>
+
+  <p class="creatorTag">An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+</body>

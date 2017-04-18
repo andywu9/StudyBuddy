@@ -1,0 +1,39 @@
+// Place all the styles related to the CreatePlan controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#createPlanPage {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	height: 95%;
+	position:absolute;	
+}
+
+#editPlan {
+	display: table-cell;
+	height:100%;
+	width: 20%;
+	vertical-align: middle;
+}
+
+#editPlanSelect {
+	margin: auto;
+	display: block;
+	width: 10%;
+	box-shadow: 1px 1px 5px black;
+}
+
+#newPlanBtn {
+	margin:auto;
+	margin-top: 1%;
+	display: block;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 1px 1px 5px black;
+}
+
+#newPlanBtn:hover {
+	background-color: #91969e;
+}

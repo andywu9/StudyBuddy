@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+  		  
+<body class="addclass">
+	<h1 class="courseTitle">Course Selection </h1>
+
+	<div class="container">
+	    <div class="row">
+	        <div class ="col-md-6 col-sm-6">
+
+	        	<h3 class="addSubTitle">Add Courses</h3> 
+			<%= form_tag("/add_class/addClass", method: "home") do %>
+		  	<select name="optone" id="courseSel" size="1">
+		        	<option value="" selected="selected">Select department code</option>
+		    	</select>
+			<br>
+			<br>
+			<select name="opttwo" id="sectionSel" size="1">
+		        	<option value="" selected="selected">Please select course</option>
+		    	</select>
+		    	<br>
+		    	<br>
+		    	<select name="optthree" id="finalSel" size="1">
+		        	<option value="" selected="selected" >Please select section</option>
+		    	</select>
+	 	 	<%= submit_tag "Add Course", data: {confirm: "Class added Successfully!"}%>
+			<% end %>
+	    
+		</div>
+	    </div>
+	</div>
+
+	<spacer></spacer>
+
+
+
+	<p class="creatorTag">An Rcos Project 2017 ~ Mike Adams, Seema Bashkar, Jeremy Torella, Andy Wu</p>
+</body>
