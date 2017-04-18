@@ -23,6 +23,10 @@
 	display:none;
 }
 
+.link {
+	color: #47d3b0;
+}
+
 .planSelect {
    color:black;
    overflow:hidden;
@@ -36,7 +40,7 @@
 }
 
 #finalStudy {
-	font-size: 2vw;
+	font-size: 1.8vw;
 }
 
 #bottomTimer {
@@ -47,7 +51,7 @@
 	width: 100%;
 	display: table;
 	table-layout: fixed;
-	height: 90%;
+	height: 95%;
 	position:absolute;
 	z-index:0;
 }
@@ -84,7 +88,6 @@
 #restartButton {
 	margin-top: 5%;
 }
-
 
 #planSubmitBtn {
 	margin-top: 5%;
