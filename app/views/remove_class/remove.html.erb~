@@ -17,7 +17,7 @@
 		    		</select>
 			    	<br>
 				<br>
-			<%= submit_tag("Remove Course"), data: {confirm: "Class removed successfully!"}%>
+			<%= submit_tag "Remove Course", data: {confirm: "Class removed successfully!"} %>
 			<% end %>
 	        </div>
 	    </div>
