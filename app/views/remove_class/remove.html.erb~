@@ -6,10 +6,11 @@
 	<h1 class="courseTitle">Course Selection </h1>
 
 	<div class="container">
-	    <div class="row">
-	        <div class ="col-md-6 col-sm-6">
-	            
-			<h3>Remove Courses</h3>
+	    <div class="row1">
+		<h3 class="removeSubTitle">Remove Courses</h3>
+	    </div>
+	    <div class="row2">
+			<br>
 			<br>
 			<%= form_tag("/remove_class/removeClass", method: "home") do %>
 		  		<select name="optone" id="classSel" size="1">
@@ -19,6 +20,8 @@
 				<br>
 			<%= submit_tag "Remove Course", data: {confirm: "Class removed successfully!"} %>
 			<% end %>
+			<br>
+			<br>
 	        </div>
 	    </div>
 	</div>

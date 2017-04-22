@@ -6,36 +6,39 @@
 	<h1 class="courseTitle">Course Selection </h1>
 
 
-	<div class="container" style="max-width:900px">
-	    <div class="row">
-	        <div class ="col-md-6 col-md-6 col-md-offset-4 ">
+	<div class="container">
+	    <div class="row1">
+		<h3 class="addSubTitle">Add Courses</h3>
+	    </div>
+	    <div class="row2">
+	        
+		<br>
+		<br>
+		<%= form_tag("/add_class/addClass", method: "home") do %>
+	  	<select name="optone" id="courseSel" size="1">
+	        	<option value="" selected="selected">Select department code</option>
+	    	</select>
+		<br>
+		<br>
+		<select name="opttwo" id="sectionSel" size="1">
+	        	<option value="" selected="selected">Please select course</option>
+	    	</select>
+	    	<br>
+	    	<br>
+	    	<select name="optthree" id="finalSel" size="1">
+	        	<option value="" selected="selected" >Please select section</option>
+	    	</select>
+	    	<br>
+	    	<br>
 
-	        	<h3 class="addSubTitle">Add Courses</h3> 
-			<%= form_tag("/add_class/addClass", method: "home") do %>
-		  	<select name="optone" id="courseSel" size="1">
-		        	<option value="" selected="selected">Select department code</option>
-		    	</select>
-			<br>
-			<br>
-			<select name="opttwo" id="sectionSel" size="1">
-		        	<option value="" selected="selected">Please select course</option>
-		    	</select>
-		    	<br>
-		    	<br>
-		    	<select name="optthree" id="finalSel" size="1">
-		        	<option value="" selected="selected" >Please select section</option>
-		    	</select>
-		    	<br>
-		    	<br>
-
-	 	 	<%= submit_tag "Add Course", data: {confirm: "Class added successfully!"}%>
-	 	 	<br>
-		    	<br>
-		    	<br>
-		    	<br>
-			<% end %>
+ 	 	<%= submit_tag "Add Course", data: {confirm: "Class added successfully!"}%>
+ 	 	<br>
+	    	<br>
+	    	<br>
+	    	<br>
+		<% end %>
 	    
-		</div>
+		
 	    </div>
 	</div>
 
