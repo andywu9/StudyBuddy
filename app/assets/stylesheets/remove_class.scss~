@@ -3,26 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.courseTitle {
-	padding-bottom: 40px;
-	color: Black;
-	text-align: center;
-	font-family: "Verdana", sans-serif;
-
-}
-
-.removeSubTitle {
-	padding-bottom: 20px;
-	color: white;
-	font-family: "Verdana", sans-serif;
-
-}
-
-.btn {
-	margin-top: 10px;
-}
-
 .removeclass {
     background-color:indianred;
     background-size:cover
+}
+
+.removeSubTitle {
+	padding: 0px;
+	margin: 0px;
+	font-family: "Verdana", sans-serif;
+	text-align: center;
+	color: white
+}
+
+.removerow2 {	
+	background-color: white;
+	box-shadow: 0px 8px 200px 0px black;
+	padding-left: 350px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	position: relative;
 }

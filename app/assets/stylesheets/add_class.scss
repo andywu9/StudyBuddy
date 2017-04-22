@@ -12,16 +12,34 @@
 }
 
 .addSubTitle {
-	padding-bottom: 20px;
+	padding: 0px;
+	margin: 0px;
 	font-family: "Verdana", sans-serif;
-
+	text-align: center;
+	color: white
 }
+
 .container {
-     background-image : url("Rensselaer_at_Hartford_Seal.png"); 
-    background-repeat:no-repeat;
+	max-width: 900px;
+}
 
-   background-size:contain;
+.row1 {
+	background-color: grey;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	position: relative;
+	z-index: 1;
+}
 
+.row2 {	
+	background-color: white;
+	box-shadow: 0px 8px 200px 0px black;
+	padding-left: 350px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	position: relative;
 }
 
 .btn {
@@ -29,6 +47,6 @@
 }
 
 .addclass {
-    background-color:indianred;
-    background-size:cover
+    	background-color:indianred;
+    	background-size:cover
 }
