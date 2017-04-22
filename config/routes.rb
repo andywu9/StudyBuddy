@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :events
   get 'add_class/add' 
+
   post 'add_class/addClass'
 
   get 'remove_class/remove'
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'sign_up/signin'
-
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do 
 
