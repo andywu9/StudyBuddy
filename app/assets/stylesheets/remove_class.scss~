@@ -19,7 +19,8 @@
 .removerow2 {	
 	background-color: white;
 	box-shadow: 0px 8px 200px 0px black;
-	padding-left: 350px;
+	margin: auto;
+	display: block;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	position: relative;
