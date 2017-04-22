@@ -9,16 +9,15 @@
 	    <div class="row1">
 		<h3 class="removeSubTitle">Remove Courses</h3>
 	    </div>
-	    <div class="removerow2">
+	    <div class="row2">
 			<br>
 			<br>
 			<%= form_tag("/remove_class/removeClass", method: "home") do %>
-		  		<select name="optone" id="classSel" size="1">
+		  		<select name="optone" id="classSel" class="centerDrop" size="1">
 		       			<option value="" selected="selected">Select course to drop</option>
 		    		</select>
 			    	<br>
-				<br>
-			<%= submit_tag "Remove Course", data: {confirm: "Class removed successfully!"} %>
+			<%= submit_tag "Remove Course", class:"centerDrop", data: {confirm: "Class removed successfully!"} %>
 			<% end %>
 			<br>
 			<br>

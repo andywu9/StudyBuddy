@@ -12,31 +12,27 @@
 	    </div>
 	    <div class="row2">
 	        
-			<br>
-			<br>
-			<%= form_tag("/add_class/addClass", method: "home") do %>
-		  	<select name="optone" id="courseSel" size="1">
-		        	<option value="" selected="selected">Select department code</option>
-		    	</select>
-			<br>
-			<br>
-			<select name="opttwo" id="sectionSel" size="1">
-		        	<option value="" selected="selected">Please select course</option>
-		    	</select>
-		    	<br>
-		    	<br>
-		    	<select name="optthree" id="finalSel" size="1">
-		        	<option value="" selected="selected" >Please select section</option>
-		    	</select>
-		    	<br>
-		    	<br>
+		<br>
+		<br>
+		<%= form_tag("/add_class/addClass", method: "home") do %>
+	  	<select name="optone" id="courseSel" class="centerDrop" size="1">
+	        	<option value="" selected="selected">Select department code</option>
+	    	</select>
+		<br>
+		<select name="opttwo" id="sectionSel" class="centerDrop" size="1">
+	        	<option value="" selected="selected">Please select course</option>
+	    	</select>
+	    	<br>
+	    	<select name="optthree" id="finalSel" class="centerDrop" size="1">
+	        	<option value="" selected="selected" >Please select section</option>
+	    	</select>
+	    	<br>
 
-	 	 	<%= submit_tag "Add Course", data: {confirm: "Class added successfully!"}%>
-	 	 	<br>
-		    	<br>
-		    	<br>
-		    	<br>
-			<% end %>
+ 	 	<%= submit_tag "Add Course", class:"centerDrop", data: {confirm: "Class added successfully!"}%>
+ 	 	<br>
+	    	<br>
+	    	<br>
+		<% end %>
 	    
 		
 	    </div>
