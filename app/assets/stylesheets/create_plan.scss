@@ -8,32 +8,58 @@
 	display: table;
 	table-layout: fixed;
 	height: 95%;
-	position:absolute;	
+	position:absolute;
+	background-color: indianred;	
+}
+
+#mainPageContents {
+	margin-top: 7%;
+}
+
+#chooseAction {
+	display:table-cell;
+	margin: auto;
+	display:block;
+}
+
+#newOrEditPlan {
+	font-size: 18pt;
+	margin:auto;
+	display:block;
 }
 
 #editPlan {
-	display: table-cell;
-	height:100%;
-	width: 20%;
-	vertical-align: middle;
+	margin:auto;
+	display:block;
+	padding-top: 1%;
 }
 
-#editPlanSelect {
+.inputBox {
+	margin:auto;
+	display:block;
+	margin-top: 1%
+}
+
+#timeTypeSelect {
+	margin-top:1%;
+}
+
+#classSelect {
+	margin-top: 1%;
+}
+
+.selecter {
 	margin: auto;
 	display: block;
-	width: 10%;
 	box-shadow: 1px 1px 5px black;
 }
 
-#newPlanBtn {
+.submitBtn {
 	margin:auto;
 	margin-top: 1%;
 	display: block;
-	border-radius: 10px;
-	border: none;
-	box-shadow: 1px 1px 5px black;
 }
 
-#newPlanBtn:hover {
-	background-color: #91969e;
+.centerTitle {
+	text-align: center;
 }

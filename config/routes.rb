@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'timer/index'
   
   get 'create_plan/index'
+  post 'create_plan/addPlan'
 
 
   devise_for :users
