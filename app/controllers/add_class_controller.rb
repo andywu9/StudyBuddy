@@ -25,6 +25,9 @@ class AddClassController < ApplicationController
   # Used to update the users calendar when courses are added by adding to the event models databse
   def addClass
 
+    colors = ["light green", "orange", "green" , "blue" , "pink", "yellow", "teal", "purple", "light blue", "silver", "grey"]
+    r = Random.new
+    mycolor = r.rand(0...10)
     #add the class info to the users table to show on the home screen
     myClass = Username.create :department_code => params[:optone],  :course_number=> params[:opttwo],
         :section_name=> params[:optthree]
@@ -52,7 +55,7 @@ class AddClassController < ApplicationController
     end
     
     # add the event to the events db using the  title , start, end and days of week info
-    mySchedule = Event.create :id => myid , :title => params[:opttwo] , :start_time => time1, :end_time => ending[0], :dow => days
+    mySchedule = Event.create :id => myid , :title => params[:opttwo] , :start_time => time1, :end_time => ending[0], :dow => days , :color => colors[mycolor]
 
   end
 
