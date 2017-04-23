@@ -3,47 +3,49 @@
 
 <body class="createPlanPage">
 	<div id="createPlanPage">
-		<div id="mainPageContents">
+		<h1 id="title">Plan Creation Page</h1>
+
+		<div id="mainPageContents" class="container">
 			<div id="chooseAction" class="row1">
 				<h2 class="centerTitle"> Edit an existing plan or add a new one! <h2>
 				
-				<select id="newOrEditPlan" class="newOrEditPlan"> 
+				<select id="newOrEditPlan" class="newOrEditPlan selecter"> 
 					<option value="newPlan"> New Plan </option>
 					<option value="editPlan"> Edit Plan </option>
 				</select>
 			</div>
 
-			<div id="newPlan" class="">
+			<div id="newPlan" class="row2">
 				<%= form_tag("/createPlan/addPlan", method: "home") do %>
 
-			  	<select name="optone" id="classSelect" class="selecter" size="1">
+			  	<select name="optone" id="newClassSelect" class="selecter topRow" size="1">
 			        <option value="" selected="selected">Select Class</option>
 			    </select>
 
 			    <input id="newDurationInput" class="inputBox" placeholder="Duration"></input>
 
-				<select name="opttwo" id="timeTypeSelect" class="selecter" size="1">
+				<select name="opttwo" id="newTimeTypeSelect" class="selecter" size="1">
 		        	<option value="min" selected="selected">minutes</option>
 		        	<option value="hours">hours</option>
 		    	</select>
 
-		 	 	<%= submit_tag "addPlan", class: "submitBtn", data: {confirm: "Plan added successfully!"}%>
+		 	 	<%= submit_tag "Confirm Plan", class: "submitBtn botRow", data: {confirm: "Plan added successfully!"}%>
 		 	 	<% end %>
 			</div>
 
-			<div id="editPlan" class="hidden">
+			<div id="editPlan" class="hidden row2">
 				<%= form_tag("/createPlan/addPlan", method: "home") do %>
 
-			  	<select name="optone" id="planSelect" class="selecter" size="1">
+			  	<select name="optone" id="planSelect" class="selecter topRow" size="1">
 			        <option value="" selected="selected">Select Plan</option>
 			    </select>
 
-			    <select name="optone" id="classSelect" class="selecter" size="1">
+			    <select name="optone" id="editClassSelect" class="selecter" size="1">
 			        <option value="" selected="selected">Select Class</option>
 			    </select>
 
 			    <input id="editDurationInput" class="inputBox" placeholder="Duration (0 to delete)">
-				    <select name="opttwo" id="timeTypeSelect" class="selecter" size="1">
+				    <select name="opttwo" id="editTimeTypeSelect" class="selecter" size="1">
 			        	<option value="min" selected="selected">minutes</option>
 			        	<option value="hours">hours</option>
 			    	</select>
@@ -51,7 +53,7 @@
 
 				
 
-		 	 	<%= submit_tag "addPlan", class: "submitBtn", data: {confirm: "Plan added successfully!"}%>
+		 	 	<%= submit_tag "Confirm Plan", class: "submitBtn botRow", data: {confirm: "Plan added successfully!"}%>
 		 	 	<% end %>
 			</div>
 		</div>

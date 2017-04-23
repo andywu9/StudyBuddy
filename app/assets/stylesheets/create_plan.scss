@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#title {
+	text-align: center;
+	color:black;
+}
+
+
 #createPlanPage {
 	width: 100%;
 	display: table;
@@ -12,13 +18,19 @@
 	background-color: indianred;	
 }
 
+.row2 {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
 #mainPageContents {
-	margin-top: 7%;
+	margin-top: 3%;
 }
 
 #chooseAction {
 	display:table-cell;
 	margin: auto;
+	padding: 1%;
 	display:block;
 }
 
@@ -31,13 +43,16 @@
 #editPlan {
 	margin:auto;
 	display:block;
-	padding-top: 1%;
 }
 
 .inputBox {
 	margin:auto;
 	display:block;
-	margin-top: 1%
+	margin-top: 2%
+}
+
+#editClassSelect {
+	margin-top: 2%
 }
 
 #timeTypeSelect {
@@ -54,12 +69,17 @@
 	box-shadow: 1px 1px 5px black;
 }
 
+.topRow {
+	margin-top: 20px;
+}
+
 .submitBtn {
 	margin:auto;
-	margin-top: 1%;
+	margin-top: 3%;
 	display: block;
 }
 
 .centerTitle {
 	text-align: center;
+	color: white;
 }
