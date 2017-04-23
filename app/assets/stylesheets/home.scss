@@ -5,43 +5,53 @@
 
 .homeTitle {
 	padding-bottom: 40px;
-	color: white;
+	color: #4d4a4a;
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	font-size: 80px;
-	font-weight: 600;
+	font-weight: 400;
 }
 
-hello {
+.hello {
 	padding-top: 10px;
-	color: white;
+	color: #4d4a4a;
     	font-size: 45px;
 	text-align: center;
-	font-weight: 600
+	font-weight: 400;
 }
 
-info {
+.info {
 	padding-top: 5px;
+	padding-bottom: 125px;
     	text-align: right;
-	color:  white;
+	color: #4d4a4a;
     	font-size: 45px;
 	text-align: center;
-	font-weight: 600
+	font-weight: 400;
 }
 
 .list-group { 
  	background:none;
-    	margin: 50px; 
+    	margin-left: 25px;
     	min-width: 400px;
-    	text-allign: center;
     	width: 40%;
-
  }
 
  .courseListHeader {
- 	color: white;
-	font-size: 40px;
-	font-weight: 600;
+	background-color: white;
+ 	color: 4d4a4a;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 20px;
+	font-weight: 400;
+	text-indent: 15px;
+	margin-left: 25px;
+	min-width: 400px;
+    	width: 40%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: -2px;
+	border-bottom-left-radius: -2px;
  }
 
 
@@ -55,7 +65,6 @@ info {
 	color: white;
 	font-size: 18px;
 	margin-top: 5px;
-
 }
 
 .actions{
@@ -64,8 +73,6 @@ info {
 	postion: fixed;
 	margin-top: 10px;
     	text-align: center;
-
-	
 }
 
 .creatorTag {
@@ -74,10 +81,8 @@ info {
     	color: white;
 }
 
-
-
 .link{
-    text-align: center;
+    	text-align: center;
 	color: blue;
 	font-size: 18px;
 }

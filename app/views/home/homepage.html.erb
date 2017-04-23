@@ -14,12 +14,12 @@
   <div class="homeTitle">Welcome to Study Buddy</div>
   
   <% if user_signed_in? %>
-    <hello>Hello <%= current_user.email %>.</hello>
+    <div class="hello">Hello <%= current_user.email %></div>
   <% end %>
   <br>
-  <info>
-    <%= "Today is #{curr_date} and the time is currently #{curr_time}." %> 
-  </info>
+  <div class="info">
+    <%= "Today is #{curr_date} and the time is currently #{curr_time}" %> 
+  </div>
 
   <br>
   <br>
