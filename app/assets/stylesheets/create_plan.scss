@@ -11,7 +11,6 @@
 
 #createPlanPage {
 	width: 100%;
-	display: table;
 	table-layout: fixed;
 	height: 95%;
 	position:absolute;
@@ -21,6 +20,8 @@
 .row2 {
 	padding-top: 2%;
 	padding-bottom: 2%;
+	width:100%;
+	display: table;
 }
 
 #mainPageContents {
@@ -28,10 +29,10 @@
 }
 
 #chooseAction {
-	display:table-cell;
+	display: table-cell;
 	margin: auto;
 	padding: 1%;
-	display:block;
+	display: block;
 }
 
 #newOrEditPlan {
@@ -63,14 +64,36 @@
 	margin-top: 1%;
 }
 
+#classAdder {
+	float:left;
+	padding-left: 5%;
+}
+
+.boringBtn {
+	border-radius: 2px;
+	box-shadow: 2px 2px 5px black;
+}
+
+#addCToP {
+	margin:auto;
+	display:block;
+	margin-top: 10%
+}
+
+#planContainer {
+	display: table-cell;
+	padding-left: 18%;
+	float: left;
+}
+
 .selecter {
-	margin: auto;
+	margin: auto;	
 	display: block;
 	box-shadow: 1px 1px 5px black;
 }
 
-.topRow {
-	margin-top: 20px;
+.minSel {
+	margin-top: 1%;
 }
 
 .submitBtn {
@@ -80,6 +103,30 @@
 }
 
 .centerTitle {
-	text-align: center;
+	text-align: center;	
 	color: white;
+}
+
+.planClass {
+	white-space: nowrap;
+}
+
+.borderedTable {
+	padding-left: 2%;
+	font-size: 13pt;
+}
+
+.tableRow {
+	display: table-row;
+}
+
+.header {
+	font-weight: bold;
+}
+
+.cell {
+	border: 1px solid black;
+	padding: 1%;
+	padding-right: 5%;
+	display:table-cell;
 }
