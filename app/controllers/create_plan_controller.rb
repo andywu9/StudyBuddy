@@ -1,7 +1,5 @@
 class CreatePlanController < ApplicationController
   def index
-<<<<<<< HEAD
-
   	#plan variables
   	gon.keys = StudyPlan.uniq.pluck(:planName).sort
 	  gon.planDict = Hash.new
