@@ -122,11 +122,14 @@
 
 .header {
 	font-weight: bold;
+	background-color: #3ee9ef;
+}
+
+.tableText {
+	margin: 5% 10px 5%;
 }
 
 .cell {
 	border: 1px solid black;
-	padding: 1%;
-	padding-right: 5%;
 	display:table-cell;
 }

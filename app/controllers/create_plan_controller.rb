@@ -3,7 +3,7 @@ class CreatePlanController < ApplicationController
 
   	#plan variables
   	gon.keys = StudyPlan.uniq.pluck(:planName).sort
-	gon.planDict = Hash.new
+	  gon.planDict = Hash.new
 
   	gon.keys.each do |plan|
   		gon.planSub_Dict = Hash.new
@@ -30,11 +30,15 @@ class CreatePlanController < ApplicationController
   		end
   		gon.classDict[c] = gon.classSub_Dict  # set the outer dictionaries value to be the sub dictionary
   	
+
+
+
+
 	end
   end
 
   def addPlan
-		#TODO: FILL THIS OUT
+		StudyPlan.create 
 
   end
 end
