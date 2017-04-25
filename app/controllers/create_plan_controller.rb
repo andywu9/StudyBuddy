@@ -38,7 +38,7 @@ class CreatePlanController < ApplicationController
   end
 
   def addPlan
-		StudyPlan.create 
+		# StudyPlan.create :planName=> params[:]
 
   end
 end

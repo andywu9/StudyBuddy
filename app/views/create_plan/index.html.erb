@@ -14,57 +14,64 @@
 					<option value="editPlan"> Edit Plan </option>
 				</select>
 			</div>
+			<div id="newPlan" class="row2">
+
 			<%= form_tag("/create_plan/addPlan") do %>
-				<div id="newPlan" class="row2">
-					<div id="classAdder">
-						<div class="pickClass" id="addClasstoPlan">
-						  	<select name="newClassSel" id="newClassSelect" class="selecter topRow" size="1">
-						        <option value="" selected="selected">Select Class</option>
-						    </select>
+				<div id="classAdder">
+					<div class="pickClass" id="addClasstoPlan">
+					  	<select name="newClassSel" id="newClassSelect" class="selecter topRow" size="1">
+					        <option value="" selected="selected">Select Class</option>
+					    </select>
 
-						    <input id="newDurationInput" class="inputBox" placeholder="Duration"></input>
+					    <input id="newDurationInput" class="inputBox" placeholder="Duration"></input>
 
-							<select name="newTimeTypeSel" id="newTimeTypeSelect" class="selecter minSel" size="1">
-					        	<option value="min" selected="selected">minutes</option>
-					        	<option value="hours">hours</option>
-					    	</select>
-					    </div>
+						<select name="newTimeTypeSel" id="newTimeTypeSelect" class="selecter minSel" size="1">
+				        	<option value="min" selected="selected">minutes</option>
+				        	<option value="hours">hours</option>
+				    	</select>
+				    </div>
 
-					    <button class="boringBtn" id="addCToP" type="button">Add Class</button>
-			 	 	</div>
+				    <button class="boringBtn" id="addCToP" type="button">Add Class</button>
+		 	 	</div>
 
-			 	 	<div class="itemList" id="planContainer">
-			    		<div id="planTable" class="borderedTable">
-			    			<div class="tableRow">
-			    				<div class="header cell"> <p class="tableText">Class</p></div>
-			    				<div class="header cell"> <p class="tableText">Duration (minutes)</p></div>
-			    			</div>
-			    		</div>
-			    	</div>
-				</div>
+		 	 	<div class="itemList" id="planContainer">
+		    		<div id="planTable" class="borderedTable">
+		    			<div class="tableRow">
+		    				<div class="header cell"> <p class="tableText">Class</p></div>
+		    				<div class="header cell"> <p class="tableText">Duration (minutes)</p></div>
+		    			</div>
+		    		</div>
 
-				<div id="editPlan" class="hidden row2">
-					
 
-				  	<select name="editPlanSel" id="planSelect" class="selecter topRow" size="1">
-				        <option value="" selected="selected">Select Plan</option>
-				    </select>
+		    		<div id="submitContainer">
+		    			<%= submit_tag "Confirm Plan", class: "submitBtn botRow", data: {confirm: "Plan added successfully!"}%>
+		 				<% end %>
+		 			</div>
+		    	</div>
+			</div>
+			
+			
 
-				    <select name="editClassSel" id="editClassSelect" class="selecter" size="1">
-				        <option value="" selected="selected">Select Class</option>
-				    </select>
+			<div id="editPlan" class="hidden row2">
+				
 
-				    <input id="editDurationInput" class="inputBox" placeholder="Duration (0 to delete)"></input>
-					<select name="editTimeTypeSel" id="editTimeTypeSelect" class="selecter minSel" size="1">
-			        	<option value="min" selected="selected">minutes</option>
-			        	<option value="hours">hours</option>
-				    </select>
-					
+			  	<select name="editPlanSel" id="planSelect" class="selecter topRow" size="1">
+			        <option value="" selected="selected">Select Plan</option>
+			    </select>
 
-			 	 	
-				</div>
-			<%= submit_tag "Confirm Plan", class: "submitBtn botRow", data: {confirm: "Plan added successfully!"}%>
-		 	<% end %>
+			    <select name="editClassSel" id="editClassSelect" class="selecter" size="1">
+			        <option value="" selected="selected">Select Class</option>
+			    </select>
+
+			    <input id="editDurationInput" class="inputBox" placeholder="Duration (0 to delete)"></input>
+				<select name="editTimeTypeSel" id="editTimeTypeSelect" class="selecter minSel" size="1">
+		        	<option value="min" selected="selected">minutes</option>
+		        	<option value="hours">hours</option>
+			    </select>
+				
+
+		 	 	
+			</div>
 		</div>
 	</div>
 </body>
