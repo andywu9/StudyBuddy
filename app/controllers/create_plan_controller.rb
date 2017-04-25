@@ -1,5 +1,6 @@
 class CreatePlanController < ApplicationController
   def index
+<<<<<<< HEAD
 
   	#plan variables
   	gon.keys = StudyPlan.uniq.pluck(:planName).sort
@@ -39,6 +40,5 @@ class CreatePlanController < ApplicationController
 
   def addPlan
 		# StudyPlan.create :planName=> params[:]
-
   end
 end

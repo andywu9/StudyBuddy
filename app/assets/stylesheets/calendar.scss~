@@ -3,20 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.myCalendar {
+
+}
+
 #calendar {
    	background-color: indianred;
 	margin-top: 40px;
 	font-size: 32px;
 	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-	width: 800px;
 }
 
 #calendar {
-	
 	padding: 10px;
 }
 
 .nightText {
-	color: white;
-	font-style:bold;
+	text-align: center;
+	font-weight: bold;	
+	color: black;
+	font-style: bold;
+	background-color: indianred;
 }
