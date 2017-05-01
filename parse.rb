@@ -1,5 +1,8 @@
 require 'yajl'
 
+
+# to run this file call rails runner parse.rb
+
 file_stream = File.open("yacs.json","r") #holds data from yacs api
 json = Yajl::Parser.parse(file_stream)
 
