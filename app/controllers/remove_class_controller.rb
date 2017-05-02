@@ -7,7 +7,10 @@ class RemoveClassController < ApplicationController
 
 	# Used to remove a course from my courses and updates calendar to reflect changes
 	def removeClass
-		Username.destroy_all(:course_number => params[:optone])  #optone is the course name from the submitted form
+		# This deletes the course from the user's table
+		# optone is the course name from the submitted form
+		Username.destroy_all(:course_number => params[:optone])
+		# This deletes the courses from calendar to reflect course being removed
 		Event.destroy_all(:title => params[:optone])
 	end
 
