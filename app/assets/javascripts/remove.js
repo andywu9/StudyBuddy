@@ -1,8 +1,10 @@
 $(function() {
   
     if($('body').is('.removeclass')) {
-    	var dict = gon.keys;
+    	// Stores the user's courses into a disctionary
+      var dict = gon.keys;
       var classSel = document.getElementById("classSel");
+      // Loop through the user's courses and populate the drop-down
       for (var key in dict) {
           classSel.options[classSel.options.length] = new Option(dict[key], dict[key]);
       }

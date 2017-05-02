@@ -33,7 +33,7 @@
   <!-- This is the header for a list of the user's courses to be displayed -->
   <div class="courseListHeader"> My Courses</div>
 
-  <!-- Retrieves a list of the user's courses from the database and stores them into a variable -->
+  <!-- Retrieves a list of the user's courses from the database and stores them into a list -->
   <% myList = Username.uniq.pluck(:course_number) %>
     <!-- Loops through the user's courses and displays them as part of a list group -->
     <div class="list-group">
