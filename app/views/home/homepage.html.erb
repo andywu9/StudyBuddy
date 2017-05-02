@@ -8,15 +8,20 @@
      
     %>
 
+  <!-- This saves the current time and date into variables to be used later -->
   <% curr_time = Time.now.strftime("%I:%M %p")
   curr_date = Time.now.strftime("%A %B %d %Y") %>
 
+  <!-- This is the title for the page -->
   <div class="homeTitle">Welcome to Study Buddy</div>
   
+  <!-- Checks if user is signed in and if so, display a welcome message to the user -->
   <% if user_signed_in? %>
     <div class="hello">Hello <%= current_user.email %></div>
   <% end %>
   <br>
+
+  <!-- This displays the date and time as part of the welcome message using variables made above -->
   <div class="info">
     <%= "Today is #{curr_date} and the time is currently #{curr_time}" %> 
   </div>
@@ -25,9 +30,12 @@
   <br>
   <br>
   
+  <!-- This is the header for a list of the user's courses to be displayed -->
   <div class="courseListHeader"> My Courses</div>
-  <% myList = Username.uniq.pluck(:course_number) %>
 
+  <!-- Retrieves a list of the user's courses from the database and stores them into a variable -->
+  <% myList = Username.uniq.pluck(:course_number) %>
+    <!-- Loops through the user's courses and displays them as part of a list group -->
     <div class="list-group">
     <% myList.each do |course| %>
         <a href="#" class="list-group-item"> <%= course %> </a>
