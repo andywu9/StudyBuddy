@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
-  		  
+
 <body class="addclass">
 	<h1 class="courseTitle">Course Selection </h1>
 
 
 	<div class="container">
 	    <div class="row1">
+	    <!-- This is the title for add courses form -->
 		<h3 class="addSubTitle">Add Courses</h3>
 	    </div>
 	    <div class="row2">
@@ -14,22 +15,26 @@
 		<br>
 		<br>
 		<%= form_tag("/add_class/addClass") do %>
+		<!-- This is the department code drop-down for add courses form -->
 	  	<select name="optone" id="courseSel" class="centerDrop" size="1">
-	        	<option value="" selected="selected">Select department code</option>
-	    	</select>
+	        <option value="" selected="selected">Select department code</option>
+	    </select>
 		<br>
+		<!-- This is the course code drop-down for add courses form -->
 		<select name="opttwo" id="sectionSel" class="centerDrop" size="1">
-	        	<option value="" selected="selected">Please select course</option>
-	    	</select>
-	    	<br>
-	    	<select name="optthree" id="finalSel" class="centerDrop" size="1">
-	        	<option value="" selected="selected" >Please select section</option>
-	    	</select>
-	    	<br>
+	        <option value="" selected="selected">Please select course</option>
+	    </select>
+	    <br>
+	    <!-- This is the section code drop-down for add courses form -->
+	    <select name="optthree" id="finalSel" class="centerDrop" size="1">
+	        <option value="" selected="selected" >Please select section</option>
+	    </select>
+	    <br>
 
+	    <!-- This allows a pop-up to show users that the course was successfully added -->
  	 	<%= submit_tag "Add Course", class:"centerDrop", data: {disable_with: "Please wait.." , confirm: "Class added successfully!"}%>
  	 	<br>
-	    	<br>
+	    <br>
 		<% end %>
 	    
 		

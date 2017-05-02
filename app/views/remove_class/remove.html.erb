@@ -7,16 +7,19 @@
 
 	<div class="container">
 	    <div class="row1">
+	    <!-- This is the title for remove courses form -->
 		<h3 class="removeSubTitle">Remove Courses</h3>
 	    </div>
 	    <div class="row2">
 			<br>
 			<br>
+			<!-- This is the course drop-down for remove courses form -->
 			<%= form_tag("/remove_class/removeClass", method: "home") do %>
 		  		<select name="optone" id="classSel" class="centerDrop" size="1">
-		       			<option value="" selected="selected">Select course to drop</option>
-		    		</select>
-			    	<br>
+		       		<option value="" selected="selected">Select course to drop</option>
+		    	</select>
+			    <br>
+			<!-- This allows a pop-up to show users that the course was successfully removed -->
 			<%= submit_tag "Remove Course", class:"centerDrop", data: {confirm: "Class removed successfully!"} %>
 			<% end %>
 			<br>
